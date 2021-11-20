@@ -20,6 +20,18 @@ JupiterUI is a front-end UI kit for modern websites. It provides a ton of styles
 - Easily extendable
 - [and much more!](https://github.com/Infinium8/JupiterUI/wiki/Feature-list)
 
+## How will this help me?
+
+If you're looking for a design system that gets out of the way to let you focus on your project, you're in the right place. There's no overhead to Jupiter. It's a plug-and-play library. Once you learn the rules, it'll cut your style effort down a lot.
+
+### Is it production ready?
+
+Absolutely. We're using Jupiter in over 30 high-priority projects for some of our clients. We've ditched Tailwind and Bootstrap (and custom CSS!) in favor of it.
+
+### Is it easy to learn?
+
+You betcha! We've specifically designed Jupiter (both visually and programmatically) to be predictable, understandable, and efficient. Once you learn the "base" system, you're on your way to an elegant-looking website.
+
 ## Usage
 
 Simply download the `dist/jupiterui.css` file and add it to your project.
