@@ -3,7 +3,7 @@
 	"version": "4.4.0",
 	"description": "An elegant and reliable UI kit for web artisans.",
 	"scripts": {
-		"css": "grunt sass && grunt postcss && grunt concat",
+		"compile": "grunt sass && grunt postcss && grunt concat",
 		"watch": "grunt watch"
 	},
 	"repository": {
