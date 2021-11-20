@@ -1,0 +1,54 @@
+.j-radio-container {
+	display: block;
+	position: relative;
+	padding-left: 2rem;
+	margin-bottom: 0.75rem;
+	cursor: pointer;
+	font-size: 1.375rem;
+	color: var(--text-color-06);
+	font-size: 1rem;
+	user-select: none;
+
+	& input {
+		position: absolute;
+		opacity: 0;
+		cursor: pointer;
+		height: 0;
+		width: 0;
+	}
+}
+.j-radio {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 1.5rem;
+	width: 1.5rem;
+	background-color: var(--ui-2);
+	border-radius: 50%;
+	transition: var(--duration-moderate-01) ease;
+}
+.j-radio-container:hover input ~ .j-radio {
+	background-color: var(--ui-3);
+}
+.j-radio-container input:checked ~ .j-radio {
+	background-color: var(--accent);
+}
+.j-radio-container:hover input:checked ~ .j-radio {
+	background-color: var(--accent-70);
+}
+.j-radio:after {
+	content: '';
+	position: absolute;
+	display: none;
+}
+.j-radio-container input:checked ~ .j-radio:after {
+	display: block;
+}
+.j-radio-container .j-radio:after {
+	top: 0.5rem;
+	left: 0.5rem;
+	width: 0.5rem;
+	height: 0.5rem;
+	border-radius: 50%;
+	background: white;
+}

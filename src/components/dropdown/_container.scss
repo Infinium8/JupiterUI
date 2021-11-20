@@ -1,0 +1,25 @@
+.j-dropdown {
+	position: relative;
+	display: inline-flex;
+	white-space: nowrap;
+
+	& * {
+		user-select: none;
+		-moz-user-select: none;
+		-webkit-user-select: none;
+	}
+
+	& .j-dropdown-trigger {
+		min-width: 100%;
+	}
+
+	&.push-above .j-dropdown-menu {
+		top: auto;
+		bottom: calc(100% + 0.5rem);
+	}
+	&.push-above-right .j-dropdown-menu {
+		top: auto;
+		right: -50%;
+		bottom: calc(100% + 0.5rem);
+	}
+}

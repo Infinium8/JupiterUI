@@ -1,0 +1,194 @@
+//
+// REM = append "r" to end of class.
+//
+// MOBILIZED
+//
+// Classes for:
+// margin = m
+// margin top & bottom = my, mv
+// margin left & right = mx, mh
+// margin-top = mt
+// margin-right = mr
+// margin-bottom = mb
+// margin-left = ml
+//
+
+@use "../../variables";
+
+@each $tuple in variables.$spacing-rem {
+	.m-#{nth($tuple, 1)}r {
+		margin: #{nth($tuple, 2)}#{'rem'};
+	}
+}
+
+@each $tuple in variables.$spacing-rem {
+	.my-#{nth($tuple, 1)}r,
+	.mv-#{nth($tuple, 1)}r {
+		margin-top: #{nth($tuple, 2)}#{'rem'};
+		margin-bottom: #{nth($tuple, 2)}#{'rem'};
+	}
+}
+
+@each $tuple in variables.$spacing-rem {
+	.mx-#{nth($tuple, 1)}r,
+	.mh-#{nth($tuple, 1)}r {
+		margin-right: #{nth($tuple, 2)}#{'rem'};
+		margin-left: #{nth($tuple, 2)}#{'rem'};
+	}
+}
+
+@each $tuple in variables.$spacing-rem {
+	.mt-#{nth($tuple, 1)}r {
+		margin-top: #{nth($tuple, 2)}#{'rem'};
+	}
+}
+@each $tuple in variables.$spacing-rem {
+	.mr-#{nth($tuple, 1)}r {
+		margin-right: #{nth($tuple, 2)}#{'rem'};
+	}
+}
+@each $tuple in variables.$spacing-rem {
+	.mb-#{nth($tuple, 1)}r {
+		margin-bottom: #{nth($tuple, 2)}#{'rem'};
+	}
+}
+@each $tuple in variables.$spacing-rem {
+	.ml-#{nth($tuple, 1)}r {
+		margin-left: #{nth($tuple, 2)}#{'rem'};
+	}
+}
+
+@media only screen and (max-width: 991px) {
+	@each $tuple in variables.$spacing-rem {
+		.tablet-m-#{nth($tuple, 1)}r {
+			margin: #{nth($tuple, 2)}#{'rem'};
+		}
+	}
+
+	@each $tuple in variables.$spacing-rem {
+		.tablet-my-#{nth($tuple, 1)}r,
+		.tablet-mv-#{nth($tuple, 1)}r {
+			margin-top: #{nth($tuple, 2)}#{'rem'};
+			margin-bottom: #{nth($tuple, 2)}#{'rem'};
+		}
+	}
+
+	@each $tuple in variables.$spacing-rem {
+		.tablet-mx-#{nth($tuple, 1)}r,
+		.tablet-mh-#{nth($tuple, 1)}r {
+			margin-right: #{nth($tuple, 2)}#{'rem'};
+			margin-left: #{nth($tuple, 2)}#{'rem'};
+		}
+	}
+
+	@each $tuple in variables.$spacing-rem {
+		.tablet-mt-#{nth($tuple, 1)}r {
+			margin-top: #{nth($tuple, 2)}#{'rem'};
+		}
+	}
+	@each $tuple in variables.$spacing-rem {
+		.tablet-mr-#{nth($tuple, 1)}r {
+			margin-right: #{nth($tuple, 2)}#{'rem'};
+		}
+	}
+	@each $tuple in variables.$spacing-rem {
+		.tablet-mb-#{nth($tuple, 1)}r {
+			margin-bottom: #{nth($tuple, 2)}#{'rem'};
+		}
+	}
+	@each $tuple in variables.$spacing-rem {
+		.tablet-ml-#{nth($tuple, 1)}r {
+			margin-left: #{nth($tuple, 2)}#{'rem'};
+		}
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	@each $tuple in variables.$spacing-rem {
+		.landscape-m-#{nth($tuple, 1)}r {
+			margin: #{nth($tuple, 2)}#{'rem'};
+		}
+	}
+
+	@each $tuple in variables.$spacing-rem {
+		.landscape-my-#{nth($tuple, 1)}r,
+		.landscape-mv-#{nth($tuple, 1)}r {
+			margin-top: #{nth($tuple, 2)}#{'rem'};
+			margin-bottom: #{nth($tuple, 2)}#{'rem'};
+		}
+	}
+
+	@each $tuple in variables.$spacing-rem {
+		.landscape-mx-#{nth($tuple, 1)}r,
+		.landscape-mh-#{nth($tuple, 1)}r {
+			margin-right: #{nth($tuple, 2)}#{'rem'};
+			margin-left: #{nth($tuple, 2)}#{'rem'};
+		}
+	}
+
+	@each $tuple in variables.$spacing-rem {
+		.landscape-mt-#{nth($tuple, 1)}r {
+			margin-top: #{nth($tuple, 2)}#{'rem'};
+		}
+	}
+	@each $tuple in variables.$spacing-rem {
+		.landscape-mr-#{nth($tuple, 1)}r {
+			margin-right: #{nth($tuple, 2)}#{'rem'};
+		}
+	}
+	@each $tuple in variables.$spacing-rem {
+		.landscape-mb-#{nth($tuple, 1)}r {
+			margin-bottom: #{nth($tuple, 2)}#{'rem'};
+		}
+	}
+	@each $tuple in variables.$spacing-rem {
+		.landscape-ml-#{nth($tuple, 1)}r {
+			margin-left: #{nth($tuple, 2)}#{'rem'};
+		}
+	}
+}
+
+@media only screen and (max-width: 478px) {
+	@each $tuple in variables.$spacing-rem {
+		.portrait-m-#{nth($tuple, 1)}r {
+			margin: #{nth($tuple, 2)}#{'rem'};
+		}
+	}
+
+	@each $tuple in variables.$spacing-rem {
+		.portrait-my-#{nth($tuple, 1)}r,
+		.portrait-mv-#{nth($tuple, 1)}r {
+			margin-top: #{nth($tuple, 2)}#{'rem'};
+			margin-bottom: #{nth($tuple, 2)}#{'rem'};
+		}
+	}
+
+	@each $tuple in variables.$spacing-rem {
+		.portrait-mx-#{nth($tuple, 1)}r,
+		.portrait-mh-#{nth($tuple, 1)}r {
+			margin-right: #{nth($tuple, 2)}#{'rem'};
+			margin-left: #{nth($tuple, 2)}#{'rem'};
+		}
+	}
+
+	@each $tuple in variables.$spacing-rem {
+		.portrait-mt-#{nth($tuple, 1)}r {
+			margin-top: #{nth($tuple, 2)}#{'rem'};
+		}
+	}
+	@each $tuple in variables.$spacing-rem {
+		.portrait-mr-#{nth($tuple, 1)}r {
+			margin-right: #{nth($tuple, 2)}#{'rem'};
+		}
+	}
+	@each $tuple in variables.$spacing-rem {
+		.portrait-mb-#{nth($tuple, 1)}r {
+			margin-bottom: #{nth($tuple, 2)}#{'rem'};
+		}
+	}
+	@each $tuple in variables.$spacing-rem {
+		.portrait-ml-#{nth($tuple, 1)}r {
+			margin-left: #{nth($tuple, 2)}#{'rem'};
+		}
+	}
+}

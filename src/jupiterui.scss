@@ -1,0 +1,25 @@
+// Basic normalization, CSS variables,
+// typography, accessibility, and so on.
+@use 'core/core';
+
+@use 'components/components';
+
+// Classes for animation and transition
+// settings.
+@use 'motion/motion';
+
+// Mostly misc styles like border classes,
+// colors, blur, shadows, and so on.
+@use 'styles/styles';
+
+
+// The layout portion of Jupiter alone
+// is 192.3 kB. This is, essentially, most of
+// what Jupiter does well behind the scenes.
+// This includes all spacing, sizing, Flex, Grid,
+// and so on. You may optionally exclude it and 
+// recompile with `yarn css`, but know that you
+// will be quite limited in terms of layout.
+@use 'layout/layout';
+
+@use 'etc/etc';

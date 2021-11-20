@@ -1,0 +1,20 @@
+.j-tabs {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+
+	& .j-tab {
+		width: 100%;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+
+		display: none;
+
+		&.active {
+			display: flex;
+		}
+	}
+}

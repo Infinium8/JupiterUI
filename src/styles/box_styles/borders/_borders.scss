@@ -1,0 +1,11 @@
+@use '../../../variables';
+@use 'radius';
+@use 'colors';
+
+$widths: '0' '1' '2' '3' '4' '5' '8' '12' '16' '20';
+
+@each $width in $widths {
+	.border-w-#{$width} {
+		border-width: #{$width}#{"px"};
+	}
+}

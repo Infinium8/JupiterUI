@@ -1,0 +1,60 @@
+.j-switch {
+	position: relative;
+	width: 2.5rem;
+	height: 1.5rem;
+	transition: var(--duration-fast-01) var(--expressive-standard);
+
+	&:hover .j-slider {
+		background-color: var(--ui-3);
+	}
+
+	&,
+	& .j-slider {
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: row;
+	}
+
+	& input {
+		opacity: 0;
+		width: 0;
+		height: 0;
+	}
+	&::before {
+		border-radius: 50%;
+	}
+
+	& input:checked + .j-slider {
+		background-color: var(--accent) !important;
+		align-items: flex-end;
+	}
+
+	& input:checked + .j-slider::before {
+		transform: translateX(1rem);
+	}
+}
+
+.j-slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	border-radius: 90px;
+	background-color: var(--ui-2);
+	transition: var(--duration-moderate-01) ease;
+
+	&::before {
+		position: absolute;
+		content: '';
+		height: 1rem;
+		width: 1rem;
+		border-radius: 90px;
+		left: 4px;
+		bottom: 4px;
+		background-color: white;
+		transition: var(--duration-moderate-01) ease;
+	}
+}

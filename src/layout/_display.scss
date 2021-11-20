@@ -1,0 +1,7 @@
+$displays: 'inline' 'block' 'inline-block' 'inline-flex' 'inline-grid' 'none' 'initial' 'inherit';
+
+@each $display in $displays {
+	.d-#{$display} {
+		display: #{$display}#{'!important'};
+	}
+}

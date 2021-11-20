@@ -1,0 +1,12 @@
+@use 'basic';
+@use 'underline';
+@use 'cover';
+@use 'color';
+
+.shallow-link {
+	cursor: pointer;
+	transition: var(--duration-moderate-01) var(--expressive-standard);
+}
+.shallow-link:hover {
+	opacity: 0.9;
+}

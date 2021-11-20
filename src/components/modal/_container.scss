@@ -1,0 +1,36 @@
+.j-modal {
+	width: 100vw;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 1.375rem;
+
+	pointer-events: none;
+	background: transparent;
+	visibility: hidden;
+	z-index: -1;
+
+	&[aria-expanded='true'] {
+		pointer-events: auto;
+		background: rgba(22, 22, 22, 0.9);
+		visibility: visible;
+		z-index: 9999999;
+	}
+
+	body:not([data-motion="false"]) & {
+		will-change: transform;
+		transition: var(--duration-slow-01) var(--expressive-entrance);
+	}
+
+	& a {
+		text-decoration: none;
+	}
+}
+body.light .j-modal[aria-expanded='true'] {
+	background: rgba(22, 22, 22, 0.5);
+}

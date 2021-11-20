@@ -1,0 +1,33 @@
+.j-icon,
+.j-button i {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	&, & svg {
+		width: 1.25rem;
+		height: 1.25rem;
+	}
+
+	$icon-sizes: (
+		'xxs' '0.5',
+		'xs' '0.75',
+		'sm' '1',
+		'md' '2',
+		'lg' '3',
+		'xl' '4',
+		'xxl' '5',
+		'xxxl' '6'
+	);
+
+	@each $tuple in $icon-sizes {
+		&#{"."}#{nth($tuple, 1)}, &#{"."}#{nth($tuple, 1)} svg {
+			width: #{nth($tuple, 2)}#{"rem"};
+			height: #{nth($tuple, 2)}#{"rem"};
+		}
+	}
+
+	&.set-stroke > svg {
+		stroke: currentColor!important;
+	}
+}

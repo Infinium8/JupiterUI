@@ -1,0 +1,163 @@
+// Classes for flex layout. Use the $layouts variable
+// to know what the main classes are.
+
+// This layout starts items from the top-left
+// in a column fashion.
+%flex {
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	flex-direction: column;
+}
+
+.flex {
+	@extend %flex;
+}
+
+// Center items vertically
+.flex-c {
+	display: flex;
+	justify-content: center !important;
+	align-items: center !important;
+	flex-direction: column !important;
+}
+
+// Adjusts items horizontally in opposing
+// order.
+.flex-sb {
+	display: flex !important;
+	justify-content: space-between !important;
+	align-items: center !important;
+	flex-direction: row !important;
+}
+
+// Flex row with vertcally centered items.
+.flex-cr {
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+}
+
+$layouts: (
+	'flex-row': (
+		'flex-direction' 'row'
+	),
+	'flex-row-r': (
+		'flex-direction' 'row-reverse'
+	),
+	'flex-column': (
+		'flex-direction' 'column'
+	),
+	'flex-column-r': (
+		'flex-direction' 'column-reverse'
+	),
+	'flex-wrap': (
+		'flex-wrap' 'wrap'
+	),
+	'flex-nowrap': (
+		'flex-wrap' 'nowrap'
+	),
+	'align-s': (
+		'align-items' 'flex-start'
+	),
+	'align-c': (
+		'align-items' 'center'
+	),
+	'align-e': (
+		'align-items' 'flex-end'
+	),
+	'justify-s': (
+		'justify-content' 'flex-start'
+	),
+	'justify-c': (
+		'justify-content' 'center'
+	),
+	'justify-e': (
+		'justify-content' 'flex-end'
+	),
+	'justify-sb': (
+		'justify-content' 'space-between'
+	),
+	'justify-sa': (
+		'justify-content' 'space-around'
+	),
+	'justify-se': (
+		'justify-content' 'space-evenly'
+	),
+	'flex-0': (
+		'flex' '0'
+	),
+	'flex-1': (
+		'flex' '1'
+	),
+	'flex-2': (
+		'flex' '2'
+	),
+	'flex-3': (
+		'flex' '3'
+	),
+);
+
+@each $class, $tuple in $layouts {
+	.#{$class} {
+		#{nth($tuple, 1)}: #{nth($tuple, 2)} !important;
+	}
+}
+
+
+@media only screen and (max-width: 1440px) {
+	@each $class, $tuple in $layouts {
+		.wide-#{$class} {
+			#{nth($tuple, 1)}: #{nth($tuple, 2)} !important;
+		}
+	}
+
+	.wide-flex-c {
+		display: flex !important;
+		justify-content: center !important;
+		align-items: center !important;
+		flex-direction: column !important;
+	}
+}
+@media only screen and (max-width: 991px) {
+	@each $class, $tuple in $layouts {
+		.tablet-#{$class} {
+			#{nth($tuple, 1)}: #{nth($tuple, 2)} !important;
+		}
+	}
+
+	.tablet-flex-c {
+		display: flex !important;
+		justify-content: center !important;
+		align-items: center !important;
+		flex-direction: column !important;
+	}
+}
+@media only screen and (max-width: 767px) {
+	@each $class, $tuple in $layouts {
+		.landscape-#{$class} {
+			#{nth($tuple, 1)}: #{nth($tuple, 2)} !important;
+		}
+	}
+
+	.landscape-flex-c {
+		display: flex !important;
+		justify-content: center !important;
+		align-items: center !important;
+		flex-direction: column !important;
+	}
+}
+@media only screen and (max-width: 478px) {
+	@each $class, $tuple in $layouts {
+		.portrait-#{$class} {
+			#{nth($tuple, 1)}: #{nth($tuple, 2)} !important;
+		}
+	}
+
+	.portrait-flex-c {
+		display: flex !important;
+		justify-content: center !important;
+		align-items: center !important;
+		flex-direction: column !important;
+	}
+}

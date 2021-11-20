@@ -1,0 +1,49 @@
+@use '../../../variables';
+
+$configs: 'top' 'right' 'bottom' 'left';
+$colors: '0' 'var(--ui)', '1' 'var(--ui-1)', '2' 'var(--ui-2)', '3' 'var(--ui-3)';
+
+@each $config in $configs {
+	@each $tuple in $colors {
+		.border-#{$config}-ui-#{nth($tuple, 1)} {
+			border-#{$config}: 1px solid #{nth($tuple, 2)};
+		}
+	}
+}
+
+@each $tuple in $colors {
+	.border-ui-#{nth($tuple, 1)} {
+		border: 1px solid #{nth($tuple, 2)};
+	}
+}
+
+@each $tuple in $colors {
+	.border-color-#{nth($tuple, 1)} {
+		border-color: #{nth($tuple, 2)};
+	}
+}
+
+@each $color in variables.$colors {
+	.border-color-#{$color} {
+		border-color: var(#{"--"}#{$color}#{"-60"});
+	}
+}
+
+.border-text-color {
+	border: 1px solid var(--text-color);
+}
+
+body.dark {
+	@each $tuple in $colors {
+		& .dark-border-color-#{nth($tuple, 1)} {
+			border-color: #{nth($tuple, 2)};
+		}
+	}
+	.dark-border-color-black {
+		border-color: black;
+	}
+}
+
+.border-white {
+	border-color: white !important;
+}

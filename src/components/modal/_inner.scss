@@ -1,0 +1,42 @@
+body.light .j-modal-inner {
+	border: none !important;
+}
+.j-modal-inner {
+	background: var(--ui);
+	border: 1px solid var(--ui-1);
+	border-radius: var(--modal-radius);
+	overflow: hidden;
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+
+	opacity: 0;
+	transform: translateY(1.25rem);
+	pointer-events: none;
+	visibility: hidden;
+	z-index: -1;
+
+	body:not([data-motion="false"]) & {
+		will-change: transform;
+		transition: var(--duration-moderate-02) var(--expressive-entrance);
+	}
+
+	body.dark & {
+		background-color: var(--ui-1);
+	}
+
+	.j-modal[aria-expanded='true'] > & {
+		opacity: 1;
+		transform: translateY(0);
+	
+		pointer-events: auto;
+		visibility: visible;
+		z-index: 999;
+	}
+
+	&.cover {
+		width: 100%;
+		height: 100%;
+	}
+}

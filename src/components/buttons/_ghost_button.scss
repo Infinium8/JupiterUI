@@ -1,0 +1,29 @@
+.ghost-button {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	height: 40px;
+	padding: 0 1.25rem;
+	border-radius: var(--button-radius);
+	background-color: var(--text-color-006);
+	color: var(--text-color);
+	font-size: 16px;
+	line-height: 1.2;
+	font-weight: 500;
+	transition: var(--duration-moderate-02) var(--expressive-standard);
+
+	&:hover { background-color: var(--text-color-012); }
+	&:active { transform: scale(0.98); }
+
+	&.light {
+		background-color: var(--light-text-color-006);
+
+		&:hover { background-color: var(--light-text-color-012); }
+	}
+
+	&.dark {
+		background-color: var(--dark-text-color-006);
+
+		&:hover { background-color: var(--dark-text-color-012); }
+	}
+}

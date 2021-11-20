@@ -1,0 +1,54 @@
+.j-notifications {
+	width: 100%;
+	max-width: 18rem;
+	position: fixed;
+	top: 1.375rem;
+	right: 1.375rem;
+	max-height: 80vh;
+	z-index: 99999999;
+	transition: height var(--duration-slow-02) var(--expressive-standard);
+
+	&.top-left {
+		top: 1.375rem;
+		left: 1.375rem;
+	}
+	&.bottom-left {
+		bottom: 1.375rem;
+		left: 1.375rem;
+	}
+	&.bottom-right {
+		bottom: 1.375rem;
+		left: 1.375rem;
+	}
+	&.bottom-middle {
+		max-height: 25vh;
+		top: auto;
+		right: auto;
+		bottom: 0;
+		left: calc(50% - 9rem);
+	}
+	&.top-middle {
+		max-height: 25vh;
+		top: 1rem;
+		right: auto;
+		bottom: auto;
+		left: calc(50% - 9rem);
+	}
+
+	@media only screen and (max-width: 767px) {
+		& {
+			max-height: 25vh;
+			top: auto !important;
+			right: 1rem !important;
+			left: 1rem !important;
+			bottom: 0 !important;
+			left: calc(50% - 9rem);
+		}
+	}
+
+	& * {
+		user-select: none;
+		-moz-user-select: none;
+		-webkit-user-select: none;
+	}
+}

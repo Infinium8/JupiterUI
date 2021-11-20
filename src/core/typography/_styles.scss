@@ -1,0 +1,121 @@
+.text-accent {
+	color: var(--accent);
+}
+
+.text-upper {
+	text-transform: uppercase;
+}
+.text-lower {
+	text-transform: lowercase;
+}
+.text-capitalize {
+	text-transform: capitalize;
+}
+
+.white-space-nowrap {
+	white-space: nowrap;
+}
+
+$weights: '100' '200' '300' '400' '500' '600' '700' '800' '900';
+
+@each $name in $weights {
+	.fw-#{$name} {
+		font-weight: #{$name} !important;
+	}
+}
+
+$heights: '1' '1', '1-1' '1.1', '1-2' '1.2', '1-3' '1.3', '1-4' '1.4', '1-5' '1.5', '1-6' '1.6', '1-7' '1.7', '1-8' '1.8', '1-9' '1.9', '2' '2';
+
+@each $tuple in $heights {
+	.lh-#{nth($tuple, 1)} {
+		line-height: #{nth($tuple, 2)} !important;
+	}
+}
+
+.ls-2xs {
+	letter-spacing: -0.05em;
+}
+.ls-xs {
+	letter-spacing: -0.025em;
+}
+.ls-normal {
+	letter-spacing: 0em;
+}
+.ls-sm {
+	letter-spacing: 0.025em;
+}
+.ls-md {
+	letter-spacing: 0.05em;
+}
+.ls-lg {
+	letter-spacing: 0.1em;
+}
+.ls-xl {
+	letter-spacing: 0.15em;
+}
+.ls-2xl {
+	letter-spacing: 0.2em;
+}
+.ls-3xl {
+	letter-spacing: 0.25em;
+}
+.ls-4xl {
+	letter-spacing: 0.3em;
+}
+.ls-5xl {
+	letter-spacing: 0.35em;
+}
+.ls-6xl {
+	letter-spacing: 0.4em;
+}
+
+.text-l {
+	text-align: left;
+}
+.text-c {
+	text-align: center;
+}
+.text-r {
+	text-align: right;
+}
+
+$font-sizes: (
+	('3xs', '0.5', '1'),
+	('2xs', '0.65', '1'),
+	('xs', '0.75', '1'),
+	('sm', '0.875', '1.25'),
+	('base', '1', '1.5'),
+	('lg', '1.125', '1.75'),
+	('xl', '1.25', '1.75'),
+	('2xl', '1.5', '2'),
+	('3xl' '1.875' '2.25'),
+	('4xl' '2.25' '2.5'),
+	('5xl' '3.25' '3.75'),
+	('6xl' '3.75' '3.75'),
+	('7xl' '4.5' '4.5'),
+	('8xl' '6' '6'),
+	('9xl' '8' '8'),
+	('10xl' '10' '10'),
+	('11xl' '11' '11'),
+	('12xl' '12' '12'),
+	('13xl' '13' '13'),
+	('14xl' '14' '14'),
+	('15xl' '15' '15')
+);
+
+@each $tuple in $font-sizes {
+	.fs-#{nth($tuple, 1)} {
+		font-size: #{nth($tuple, 2)}#{'rem'} !important;
+		line-height: #{nth($tuple, 3)}#{'rem'};
+	}
+}
+
+
+// Decorations
+$decorations: 'none' 'underline' 'overline' 'line-through' 'blink' 'initial' 'inherit';
+
+@each $decoration in $decorations {
+    .decorate-#{$decoration} {
+        text-decoration: #{$decoration} !important;
+    }
+}

@@ -1,0 +1,15 @@
+@use 'input/input';
+@use 'checkbox';
+@use 'radio';
+@use 'switch';
+
+form {
+	width: 100%;
+
+	& .j-label {
+		display: block;
+		font-size: 1rem;
+		opacity: 0.7;
+		margin-bottom: 0.5rem;
+	}
+}

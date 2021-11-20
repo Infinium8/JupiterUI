@@ -1,0 +1,21 @@
+@use 'j_button';
+@use 'ghost_button';
+
+.j-button-container {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-direction: row;
+
+	& a:not(:first-child) {
+		margin-left: 1rem;
+	}
+}
+@media only screen and (max-width: 991px) {
+	.j-button-container a:not(:first-child) {
+		margin-left: 0;
+	}
+	.j-button-container a {
+		margin-bottom: 1rem;
+	}
+}

@@ -1,0 +1,245 @@
+// Classes for CSS Grid layout
+
+.grid {
+	display: grid !important;
+	gap: 1rem;
+	grid-template-columns: repeat(1, minmax(0, 1fr));
+
+	& .grid-block {
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+		flex-direction: column;
+	}
+}
+
+$nums: '1' '2' '3' '4' '5' '6' '7' '8' '9' '10' '11' '12';
+
+// Columns. e.g. grid-6 has 6 columns
+@each $name in $nums {
+	.grid-#{$name}, .grid-column-#{$name} {
+		grid-template-columns: repeat(#{$name}, minmax(0, 1fr)) !important;
+	}
+}
+
+// Rows. e.g. grid-row-6 has 6 rows
+@each $name in $nums {
+	.grid-row-#{$name} {
+		grid-template-rows: repeat(#{$name}, minmax(0, 1fr)) !important;
+	}
+}
+
+
+// These are special grid layouts.
+// Instead of these special sizes, it's
+// better to add more columns to your grid
+// and manually set the span width on certain
+// elements in the grid.
+$specialized_sizes: '1' '2', '2' '1', '1' '3', '3' '1', '1' '4', '4' '1', '1' '5', '5' '1', '1' '6', '6' '1';
+
+@each $tuple in $specialized_sizes {
+	.grid-#{nth($tuple, 1)}-#{nth($tuple, 2)} {
+		grid-template-columns: #{nth($tuple, 1)}#{'fr'} #{nth($tuple, 2)}#{'fr'};
+	}
+}
+
+
+// Grid spans.
+// e.g. grid-span-column-3 will take up 3 columns
+$orientations: 'row', 'column';
+$spans: 1 2 3 4 5 6 7 8 9 10 11 12;
+
+@each $orientation in $orientations {
+	@each $val in $spans {
+		.grid-span-#{$orientation}-#{$val} {
+			grid-#{$orientation}: span #{$val} / span #{$val};
+		}
+	}
+}
+
+.grid-span-col-full {
+	grid-column: 1 / -1;
+}
+.grid-span-col-auto {
+	grid-column: auto;
+}
+
+.grid-span-row-auto {
+	grid-row: auto;
+}
+.grid-span-row-full {
+	grid-row: 1 / -1;
+}
+
+// Gaps in rem
+$gaps: (
+	'0' '0',
+	'0-15' '0.15',
+	'0-25' '0.25',
+	'0-5' '0.5',
+	'0-75' '0.75',
+	'1' '1',
+	'1-25' '1.25',
+	'1-5' '1.5',
+	'1-75' '1.75',
+	'2' '2',
+	'2-25' '2.25',
+	'2-5' '2.5',
+	'2-75' '2.75',
+	'3' '3',
+	'3-25' '3.25',
+	'3-5' '3.5',
+	'3-75' '3.75',
+	'4' '4',
+	'4-25' '4.25',
+	'4-5' '4.5',
+	'4-75' '4.75',
+	'5' '5',
+);
+
+@each $name, $gap in $gaps {
+	.gap-#{$name}, .gap-#{$name}#{"r"} {
+		gap: #{$gap}#{'rem'};
+	}
+}
+
+// wide breakpoint for large screens
+@media only screen and (max-width: 1440px) {
+	@each $name in $nums {
+		.wide-grid-#{$name}, .wide-grid-column-#{$name} {
+			grid-template-columns: repeat(#{$name}, minmax(0, 1fr)) !important;
+		}
+	}
+}
+
+@media only screen and (max-width: 991px) {
+	.grid-2 {
+		grid-template-columns: repeat(1, minmax(0, 1fr));
+	}
+	.grid-2.break-landscape {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	@each $name in $nums {
+		.tablet-grid-#{$name}, .tablet-grid-column-#{$name} {
+			grid-template-columns: repeat(#{$name}, minmax(0, 1fr)) !important;
+		}
+	}
+
+	@each $tuple in $specialized_sizes {
+		.tablet-grid-#{nth($tuple, 1)}-#{nth($tuple, 2)} {
+			grid-template-columns: #{nth($tuple, 1)}#{'fr'} #{nth($tuple, 2)}#{'fr'};
+		}
+	}
+
+	@each $orientation in $orientations {
+		@each $val in $spans {
+			.tablet-grid-span-#{$orientation}-#{$val} {
+				grid-column: span #{$val} / span #{$val};
+			}
+		}
+	}
+
+	.tablet-grid-span-col-auto {
+		grid-column: auto;
+	}
+	.tablet-grid-span-col-full {
+		grid-column: 1 / -1;
+	}
+	.tablet-grid-span-row-auto {
+		grid-row: auto;
+	}
+	.tablet-grid-span-row-full {
+		grid-row: 1 / -1;
+	}
+
+	@each $name, $gap in $gaps {
+		.tablet-gap-#{$name} {
+			gap: #{$gap}#{'rem'};
+		}
+	}
+}
+@media only screen and (max-width: 767px) {
+	.grid-2.break-landscape {
+		grid-template-columns: repeat(1, minmax(0, 1fr));
+	}
+
+	@each $name in $nums {
+		.landscape-grid-#{$name}, .landscape-grid-column-#{$name} {
+			grid-template-columns: repeat(#{$name}, minmax(0, 1fr)) !important;
+		}
+	}
+
+	@each $tuple in $specialized_sizes {
+		.landscape-grid-#{nth($tuple, 1)}-#{nth($tuple, 2)} {
+			grid-template-columns: #{nth($tuple, 1)}#{'fr'} #{nth($tuple, 2)}#{'fr'};
+		}
+	}
+
+	@each $orientation in $orientations {
+		@each $val in $spans {
+			.landscape-grid-span-#{$orientation}-#{$val} {
+				grid-column: span #{$val} / span #{$val};
+			}
+		}
+	}
+
+	.landscape-grid-span-col-auto {
+		grid-column: auto;
+	}
+	.landscape-grid-span-col-full {
+		grid-column: 1 / -1;
+	}
+	.landscape-grid-span-row-auto {
+		grid-row: auto;
+	}
+	.landscape-grid-span-row-full {
+		grid-row: 1 / -1;
+	}
+
+	@each $name, $gap in $gaps {
+		.landscape-gap-#{$name} {
+			gap: #{$gap}#{'rem'};
+		}
+	}
+}
+@media only screen and (max-width: 478px) {
+	@each $name in $nums {
+		.portrait-grid-#{$name}, .portrait-grid-column-#{$name} {
+			grid-template-columns: repeat(#{$name}, minmax(0, 1fr)) !important;
+		}
+	}
+
+	@each $tuple in $specialized_sizes {
+		.portrait-grid-#{nth($tuple, 1)}-#{nth($tuple, 2)} {
+			grid-template-columns: #{nth($tuple, 1)}#{'fr'} #{nth($tuple, 2)}#{'fr'};
+		}
+	}
+
+	@each $orientation in $orientations {
+		@each $val in $spans {
+			.portrait-grid-span-#{$orientation}-#{$val} {
+				grid-column: span #{$val} / span #{$val};
+			}
+		}
+	}
+
+	.portrait-grid-span-col-auto {
+		grid-column: auto;
+	}
+	.portrait-grid-span-col-full {
+		grid-column: 1 / -1;
+	}
+	.portrait-grid-span-row-auto {
+		grid-row: auto;
+	}
+	.portrait-grid-span-row-full {
+		grid-row: 1 / -1;
+	}
+
+	@each $name, $gap in $gaps {
+		.portrait-gap-#{$name} {
+			gap: #{$gap}#{'rem'};
+		}
+	}
+}

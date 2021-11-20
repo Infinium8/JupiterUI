@@ -1,0 +1,66 @@
+// Head
+@use '../variables';
+
+* {
+	box-sizing: border-box!important;
+}
+a {
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	cursor: pointer;
+	color: var(--accent);
+	text-decoration: none;
+}
+button {
+	box-shadow: none;
+	outline: none;
+	border: none;
+}
+
+pre {
+	margin: 0;
+	max-width: 100%;
+}
+code {
+    display: inline-flex;
+    padding: 0.25rem 0.25rem;
+	line-height: 1;
+    border-radius: .25rem;
+    background: var(--cool-gray-100);
+    white-space: pre-wrap;
+    color: white;
+	font-size: 1rem;
+}
+
+.j-app-bg {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+.j-theme-button {
+	position: fixed;
+	bottom: 1.375rem;
+	right: 1.375rem;
+	padding: 0 !important;
+	width: 3rem !important;
+	height: 3rem !important;
+	border-radius: 90px !important;
+	background-color: var(--accent);
+	color: white;
+	z-index: 999;
+
+	& i {
+		width: 1.25rem !important;
+		height: 1.25rem !important;
+	}
+}
+
+// Wordpress overrides
+#main {
+	width: 100%;
+}

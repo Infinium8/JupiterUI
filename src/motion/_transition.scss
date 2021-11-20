@@ -1,0 +1,14 @@
+@use '../variables';
+
+// Transitions
+@each $motion in variables.$easings {
+	.#{$motion} {
+		transition-timing-function: var(--#{$motion});
+	}
+}
+
+@each $duration in variables.$duration_vars {
+	.#{$duration} {
+		transition-duration: var(--#{$duration});
+	}
+}

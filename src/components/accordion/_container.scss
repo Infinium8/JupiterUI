@@ -1,0 +1,20 @@
+.j-accordion {
+	position: relative;
+	background-color: var(--ui);
+	border-radius: var(--accordion-radius);
+	box-shadow: var(--shadow-sm);
+	width: 100%;
+	max-width: 100%;
+	transition: var(--duration-moderate-01) var(--expressive-standard);
+
+	body.dark & {
+		background-color: var(--ui-1);
+	}
+
+	&,
+	& .j-acc-trigger {
+		user-select: none;
+		-moz-user-select: none;
+		-webkit-user-select: none;
+	}
+}

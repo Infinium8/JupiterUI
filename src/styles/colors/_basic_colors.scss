@@ -1,0 +1,52 @@
+@use '../../variables';
+
+// Accent
+.text-accent {
+	color: var(--accent);
+}
+.bg-accent {
+	background-color: var(--accent);
+}
+
+.bg-transparent {
+	background: transparent !important;
+}
+
+@each $color in variables.$uis {
+	.#{$color} {
+		background-color: var(#{"--"}#{$color});
+	}
+}
+
+body.dark, html.dark, html[data-theme="dark"] {
+	@each $color in variables.$uis {
+		.dark-#{$color} {
+			background-color: var(#{"--"}#{$color});
+		}
+	}
+}
+
+// Basic
+@each $tuple in variables.$basic-colors {
+	.text-#{nth($tuple, 1)} {
+		color: #{nth($tuple, 2)};
+	}
+}
+
+@each $tuple in variables.$dynamic-colors {
+	.text-#{nth($tuple, 1)} {
+		color: var(#{"--"}#{nth($tuple, 2)});
+	}
+}
+
+@each $tuple in variables.$basic-colors {
+	.bg-#{nth($tuple, 1)} {
+		background-color: #{nth($tuple, 2)};
+	}
+}
+
+@each $tuple in variables.$basic-colors {
+	.bg-hover-#{nth($tuple, 1)}:hover {
+		background-color: #{nth($tuple, 2)};
+	}
+}

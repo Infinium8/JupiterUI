@@ -1,0 +1,33 @@
+@use '../../variables';
+
+.shadow-xs {
+	box-shadow: var(--shadow-xs);
+}
+.shadow-sm {
+	box-shadow: var(--shadow-sm);
+}
+.shadow-md {
+	box-shadow: var(--shadow-md);
+}
+.shadow-lg {
+	box-shadow: var(--shadow-lg);
+}
+.shadow-hover:hover {
+	box-shadow: var(--shadow-hover);
+}
+
+.no-shadow {
+	box-shadow: none !important;
+}
+
+$sizes: 'sm' '0.125rem 0.0625rem', 'md' '0.25rem 0.75rem', 'lg' '0.375rem 1.125rem';
+
+@each $weight in '10' '20' '30' '40' '50' '60' '70' '80' '90' '100' {
+	@each $color in 'gray' {
+		@each $tuple in $sizes {
+			.shadow-#{$color}-#{$weight}-#{nth($tuple, 1)} {
+				box-shadow: 0px #{nth($tuple, 2)} 0px var(#{'--'}#{$color}#{'-'}#{$weight});
+			}
+		}
+	}
+}

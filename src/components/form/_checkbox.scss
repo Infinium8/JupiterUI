@@ -1,0 +1,58 @@
+.j-checkbox-container {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	position: relative;
+	padding-left: 2rem;
+	margin-bottom: 0.75rem;
+	cursor: pointer;
+	font-size: 1.25rem;
+	color: var(--text-color-06);
+	font-size: 1rem;
+	user-select: none;
+
+	& input {
+		position: absolute;
+		opacity: 0;
+		cursor: pointer;
+		height: 0;
+		width: 0;
+	}
+}
+.j-checkmark {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 1.5rem;
+	width: 1.5rem;
+	background-color: var(--ui-2);
+	border-radius: var(--border-radius);
+	transition: var(--duration-moderate-01) ease;
+}
+.j-checkbox-container:hover input ~ .j-checkmark {
+	background-color: var(--ui-3);
+}
+.j-checkbox-container input:checked ~ .j-checkmark {
+	background-color: var(--accent);
+}
+.j-checkbox-container:hover input:checked ~ .j-checkmark {
+	background-color: var(--accent-70);
+}
+.j-checkmark:after {
+	content: '';
+	position: absolute;
+	display: none;
+}
+.j-checkbox-container input:checked ~ .j-checkmark:after {
+	display: block;
+}
+.j-checkbox-container .j-checkmark:after {
+	left: 0.5625rem;
+	top: 0.3125rem;
+	width: 0.3125rem;
+	height: 0.625rem;
+	border: solid white;
+	border-width: 0 0.1875rem 0.1875rem 0;
+	transform: rotate(45deg);
+}

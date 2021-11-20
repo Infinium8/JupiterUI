@@ -1,0 +1,38 @@
+@use '../variables';
+
+.j-color {
+	border-radius: 90px;
+	height: 1.5rem;
+	width: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	border: 2px solid transparent;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+
+	&,
+	& > div {
+		transition: var(--duration-fast-02) var(--expressive-standard);
+	}
+
+	&.active > div {
+		opacity: 1;
+	}
+
+	& > div {
+        opacity: 0;
+        border-radius: 90px;
+		height: 0.5rem;
+		width: 0.5rem;
+		background: white;
+	}
+
+	@each $color in variables.$colors {
+		&.#{$color} {
+			background-color: var(--#{$color}-60);
+		}
+	}
+}

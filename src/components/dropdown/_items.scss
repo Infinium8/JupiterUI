@@ -1,0 +1,42 @@
+.j-dropdown-menu li {
+	width: 100%;
+}
+.j-dropdown-menu li a, .j-dropdown-menu li button, .j-dropdown-item {
+	background-color: transparent;
+	width: 100%;
+	padding: 0.75rem 1rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	text-decoration: none;
+	font-size: 0.875rem;
+	font-weight: 500;
+	color: var(--text-color);
+	transition: var(--duration-fast-01) var(--expressive-standard);
+}
+.j-dropdown-menu li a:hover, .j-dropdown-menu li button:hover {
+	background-color: var(--ui-1);
+}
+.j-dropdown-menu li a.no-hover:hover, .j-dropdown-menu li button.no-hover:hover {
+	background-color: transparent;
+}
+.j-dropdown-menu li a > i, .j-dropdown-menu li button > i {
+	transition: var(--duration-moderate-01) ease;
+}
+.j-dropdown-menu li a:active > i, .j-dropdown-menu li button:active > i {
+	transform: scale(0.9);
+}
+body.dark .j-dropdown-menu li a:hover, body.dark .j-dropdown-menu li button:hover {
+	background-color: var(--ui-2);
+}
+
+// Bordered items
+.j-dropdown.items-bordered .j-dropdown-menu {
+	padding: 0;
+}
+.j-dropdown.items-bordered li:not(:last-child) a, .j-dropdown.items-bordered li:not(:last-child) button {
+	border-bottom: 1px solid var(--ui-2);
+}
+body.dark .j-dropdown.items-bordered li:not(:last-child) a, body.dark .j-dropdown.items-bordered li:not(:last-child) button {
+	border-bottom-color: var(--ui) !important;
+}

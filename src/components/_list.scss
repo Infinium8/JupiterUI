@@ -1,0 +1,29 @@
+.j-list {
+	margin: 1.25rem 0;
+
+	&.numbered {
+		list-style: lower-alpha;
+	}
+
+	& li {
+		padding: 0.25rem 0;
+	}
+	& ul {
+		margin-top: 0;
+	}
+}
+
+ul.flex-row {
+	max-width: 31rem;
+}
+ul.flex-row li {
+	margin-right: 0.5rem;
+}
+ul.flex-row li p {
+	margin: 0 0 0.5rem 0;
+}
+
+ul.flex-wrap {
+	list-style: none;
+	padding-inline-start: 0;
+}

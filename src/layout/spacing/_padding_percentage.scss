@@ -1,0 +1,186 @@
+//
+// PERCENTAGE = append "p" to end of class.
+//
+// MOBILIZED
+//
+// Classes for:
+// padding = p
+// padding top & bottom = py, pv
+// padding left & right = px, ph
+// padding-top = pt
+// padding-right = pr
+// padding-bottom = pb
+// padding-left = pl
+//
+
+@use '../../variables';
+
+@each $name in variables.$spacing-percent {
+	.p-#{$name}p {
+		padding: #{$name}#{'%'};
+	}
+}
+
+@each $name in variables.$spacing-percent {
+	.py-#{$name}p {
+		padding-top: #{$name}#{'%'};
+		padding-bottom: #{$name}#{'%'};
+	}
+}
+
+@each $name in variables.$spacing-percent {
+	.ph-#{$name}p {
+		padding-right: #{$name}#{'%'};
+		padding-left: #{$name}#{'%'};
+	}
+}
+
+@each $name in variables.$spacing-percent {
+	.pt-#{$name}p {
+		padding-top: #{$name}#{'%'};
+	}
+}
+@each $name in variables.$spacing-percent {
+	.pr-#{$name}p {
+		padding-right: #{$name}#{'%'};
+	}
+}
+@each $name in variables.$spacing-percent {
+	.pb-#{$name}p {
+		padding-bottom: #{$name}#{'%'};
+	}
+}
+@each $name in variables.$spacing-percent {
+	.pl-#{$name}p {
+		padding-left: #{$name}#{'%'};
+	}
+}
+
+@media only screen and (max-width: 991px) {
+	@each $name in variables.$spacing-percent {
+		.tablet-p-#{$name}p {
+			padding: #{$name}#{'%'};
+		}
+	}
+
+	@each $name in variables.$spacing-percent {
+		.tablet-py-#{$name}p {
+			padding-top: #{$name}#{'%'};
+			padding-bottom: #{$name}#{'%'};
+		}
+	}
+
+	@each $name in variables.$spacing-percent {
+		.tablet-ph-#{$name}p {
+			padding-right: #{$name}#{'%'};
+			padding-left: #{$name}#{'%'};
+		}
+	}
+
+	@each $name in variables.$spacing-percent {
+		.tablet-pt-#{$name}p {
+			padding-top: #{$name}#{'%'};
+		}
+	}
+	@each $name in variables.$spacing-percent {
+		.tablet-pr-#{$name}p {
+			padding-right: #{$name}#{'%'};
+		}
+	}
+	@each $name in variables.$spacing-percent {
+		.tablet-pb-#{$name}p {
+			padding-bottom: #{$name}#{'%'};
+		}
+	}
+	@each $name in variables.$spacing-percent {
+		.tablet-pl-#{$name}p {
+			padding-left: #{$name}#{'%'};
+		}
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	@each $name in variables.$spacing-percent {
+		.landscape-p-#{$name}p {
+			padding: #{$name}#{'%'};
+		}
+	}
+
+	@each $name in variables.$spacing-percent {
+		.landscape-py-#{$name}p {
+			padding-top: #{$name}#{'%'};
+			padding-bottom: #{$name}#{'%'};
+		}
+	}
+
+	@each $name in variables.$spacing-percent {
+		.landscape-ph-#{$name}p {
+			padding-right: #{$name}#{'%'};
+			padding-left: #{$name}#{'%'};
+		}
+	}
+
+	@each $name in variables.$spacing-percent {
+		.landscape-pt-#{$name}p {
+			padding-top: #{$name}#{'%'};
+		}
+	}
+	@each $name in variables.$spacing-percent {
+		.landscape-pr-#{$name}p {
+			padding-right: #{$name}#{'%'};
+		}
+	}
+	@each $name in variables.$spacing-percent {
+		.landscape-pb-#{$name}p {
+			padding-bottom: #{$name}#{'%'};
+		}
+	}
+	@each $name in variables.$spacing-percent {
+		.landscape-pl-#{$name}p {
+			padding-left: #{$name}#{'%'};
+		}
+	}
+}
+
+@media only screen and (max-width: 478px) {
+	@each $name in variables.$spacing-percent {
+		.portrait-p-#{$name}p {
+			padding: #{$name}#{'%'};
+		}
+	}
+
+	@each $name in variables.$spacing-percent {
+		.portrait-py-#{$name}p {
+			padding-top: #{$name}#{'%'};
+			padding-bottom: #{$name}#{'%'};
+		}
+	}
+
+	@each $name in variables.$spacing-percent {
+		.portrait-ph-#{$name}p {
+			padding-right: #{$name}#{'%'};
+			padding-left: #{$name}#{'%'};
+		}
+	}
+
+	@each $name in variables.$spacing-percent {
+		.portrait-pt-#{$name}p {
+			padding-top: #{$name}#{'%'};
+		}
+	}
+	@each $name in variables.$spacing-percent {
+		.portrait-pr-#{$name}p {
+			padding-right: #{$name}#{'%'};
+		}
+	}
+	@each $name in variables.$spacing-percent {
+		.portrait-pb-#{$name}p {
+			padding-bottom: #{$name}#{'%'};
+		}
+	}
+	@each $name in variables.$spacing-percent {
+		.portrait-pl-#{$name}p {
+			padding-left: #{$name}#{'%'};
+		}
+	}
+}

@@ -1,0 +1,23 @@
+$radiuses: '0' '1' '2' '3' '4' '5' '8' '12' '16' '20' '90';
+$configs: 'top-left' 'top-right' 'bottom-left' 'bottom-right';
+
+@each $radius in $radiuses {
+	.radius-#{$radius} {
+		border-radius: #{$radius}#{'px'};
+	}
+}
+.radius-50p {
+	border-radius: 50%;
+}
+
+.radius {
+	border-radius: var(--border-radius);
+}
+
+@each $config in $configs {
+	@each $radius in $radiuses {
+		.border-#{$config}-radius-#{$radius} {
+			border-#{$config}-radius: #{$radius}#{'px'};
+		}
+	}
+}

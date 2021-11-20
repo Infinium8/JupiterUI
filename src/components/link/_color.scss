@@ -1,0 +1,38 @@
+@use '../../variables';
+
+.j-link.color {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2rem;
+    color: var(--text-color);
+
+    & > span {
+        font-size: 1.15rem;
+    }
+
+    & > div:first-child {
+        height: 23px;
+        width: 23px;
+        background-color: var(--accent-50);
+        border-radius: 90px;
+        margin-right: 0.75rem;
+        transition: var(--duration-moderate-02) var(--expressive-standard);
+    }
+
+    &:hover > div:first-child {
+        background-color: var(--cyan-40);
+        width: 0.8rem;
+        height: 0.8rem;
+    }
+
+    &:hover {
+        opacity: 1;
+    }
+
+    @each $color in variables.$colors {
+        &.#{$color}:hover > div:first-child {
+            background-color: var(#{"--"}#{$color}#{"-40"});
+        }
+    }
+}

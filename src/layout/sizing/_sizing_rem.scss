@@ -1,0 +1,91 @@
+@use '../../variables';
+
+$sizes: '1' '2' '3' '4' '5' '8' '10' '12' '16' '18' '20' '30' '40' '50' '60' '70' '80' '90' '100';
+
+// REM
+@each $tuple in variables.$sizings {
+	@each $name, $size in variables.$sizing-rem {
+		.#{nth($tuple, 1)}#{"-"}#{$name}#{"r"} {
+			#{nth($tuple, 2)}: #{$size}#{'rem'} !important;
+		}
+	}
+}
+
+// Percentage
+@each $tuple in variables.$sizings {
+	@each $size in $sizes {
+		.#{nth($tuple, 1)}#{"-"}#{$size}#{"p"} {
+			#{nth($tuple, 2)}: #{$size}#{'%'} !important;
+		}
+	}
+}
+
+@media only screen and (max-width: 1440px) {
+    @each $tuple in variables.$sizings {
+		@each $name, $size in variables.$sizing-rem {
+			.wide-#{nth($tuple, 1)}#{"-"}#{$name}#{"r"} {
+				#{nth($tuple, 2)}: #{$size}#{'rem'} !important;
+			}
+		}
+	}
+
+    @each $tuple in variables.$sizings {
+		@each $size in $sizes {
+			.wide-#{nth($tuple, 1)}#{"-"}#{$size}#{"p"} {
+				#{nth($tuple, 2)}: #{$size}#{'%'} !important;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 991px) {
+    @each $tuple in variables.$sizings {
+		@each $name, $size in variables.$sizing-rem {
+			.tablet-#{nth($tuple, 1)}#{"-"}#{$name}#{"r"} {
+				#{nth($tuple, 2)}: #{$size}#{'rem'} !important;
+			}
+		}
+	}
+
+    @each $tuple in variables.$sizings {
+		@each $size in $sizes {
+			.tablet-#{nth($tuple, 1)}#{"-"}#{$size}#{"p"} {
+				#{nth($tuple, 2)}: #{$size}#{'%'} !important;
+			}
+		}
+	}
+}
+@media only screen and (max-width: 767px) {
+    @each $tuple in variables.$sizings {
+		@each $name, $size in variables.$sizing-rem {
+			.landscape-#{nth($tuple, 1)}#{"-"}#{$name}#{"r"} {
+				#{nth($tuple, 2)}: #{$size}#{'rem'} !important;
+			}
+		}
+	}
+
+    @each $tuple in variables.$sizings {
+		@each $size in $sizes {
+			.landscape-#{nth($tuple, 1)}#{"-"}#{$size}#{"p"} {
+				#{nth($tuple, 2)}: #{$size}#{'%'} !important;
+			}
+		}
+	}
+}
+@media only screen and (max-width: 478px) {
+    @each $tuple in variables.$sizings {
+		@each $name, $size in variables.$sizing-rem {
+			.portrait-#{nth($tuple, 1)}#{"-"}#{$name}#{"r"} {
+				#{nth($tuple, 2)}: #{$size}#{'rem'} !important;
+			}
+		}
+	}
+
+    @each $tuple in variables.$sizings {
+		@each $size in $sizes {
+			.portrait-#{nth($tuple, 1)}#{"-"}#{$size}#{"p"} {
+				#{nth($tuple, 2)}: #{$size}#{'%'} !important;
+			}
+		}
+	}
+}

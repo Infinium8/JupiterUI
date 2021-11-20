@@ -1,0 +1,34 @@
+@keyframes skeleton {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0.4;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+%skeleton-anim {
+	transition: var(--duration-moderate-01) ease;
+	animation: skeleton 2s var(--expressive-standard) infinite;
+}
+
+.skeleton, .skeleton-pulse {
+	@extend %skeleton-anim;
+}
+
+.skeleton {
+	background-color: var(--ui-2);
+	padding: 1rem;
+	border-radius: var(--border-radius);
+	width: 100%;
+
+	&.light {
+		background-color: var(--ui-1);
+	}
+	&.dark {
+		background-color: var(--ui-3);
+	}
+}

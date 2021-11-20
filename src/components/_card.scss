@@ -1,0 +1,93 @@
+.j-card {
+	background-color: var(--ui);
+	border-radius: var(--card-radius);
+	box-shadow: var(--shadow-sm);
+	overflow: hidden;
+	transition: var(--duration-fast-02) var(--productive-standard);
+
+	body.dark &.clarify {
+		border: 1px solid var(--ui-1);
+	}
+
+	body.dark &:not(.clarify) {
+		background-color: var(--ui-1);
+	}
+
+	&.image-zoom .j-card-image > div {
+		transform-origin: center center;
+		transition: var(--duration-moderate-02) var(--productive-standard);
+	}
+
+	&.image-zoom:hover .j-card-image > div {
+		transform: scale(1.03);
+	}
+
+	// Horizontal split of image and content.
+	// Essentially a "featured" card.
+	&.split {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: row;
+	}
+
+	&.split:not(.no-min) {
+		min-height: 15rem;
+	}
+
+	&.clickable {
+		&,
+		& h4,
+		& p {
+			color: var(--text-color);
+		}
+
+		& * {
+			user-select: none;
+		}
+
+		cursor: pointer;
+
+		&:hover {
+			transform: translateY(-2px);
+			box-shadow: var(--shadow-md);
+		}
+		&:active {
+			transform: scale(0.995);
+		}
+	}
+
+	& .j-card-image {
+		min-height: 15rem;
+		width: 100%;
+		border-top-right-radius: var(--border-radius);
+		border-top-left-radius: var(--border-radius);
+
+		&.sm {
+			min-height: 10rem;
+		}
+		&.md {
+			min-height: 17rem;
+		}
+		&.lg {
+			min-height: 20rem;
+		}
+	}
+
+	& .j-card-content {
+		padding: 1.5rem;
+
+		& h4 {
+			margin-bottom: 0.5rem;
+		}
+
+		& p {
+			margin: 0;
+		}
+
+		& .j-button {
+			width: 100%;
+			margin-top: 1rem;
+		}
+	}
+}

@@ -1,0 +1,22 @@
+$blur-vals: '1' '2' '3' '4' '5' '6' '7' '8' '9' '10' '11' '12' '13' '14' '15' '20' '25' '30';
+
+.backdrop-blur,
+.backdrop-blur-hover:hover {
+	background-color: var(--ui-blur-fallback);
+}
+
+@each $val in $blur-vals {
+	.backdrop-blur-#{$val} {
+		background-color: var(--ui-blur-fallback);
+	}
+}
+
+@supports (-webkit-backdrop-filter: saturate(180%) blur(20px)) or (backdrop-filter: saturate(180%) blur(20px)) {
+	@each $val in $blur-vals {
+		.backdrop-blur-#{$val} {
+			background-color: var(--ui-blur);
+			-webkit-backdrop-filter: saturate(180%) blur(#{$val}#{'px'});
+			backdrop-filter: saturate(180%) blur(#{$val}#{'px'});
+		}
+	}
+}

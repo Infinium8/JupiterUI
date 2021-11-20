@@ -1,0 +1,46 @@
+@use 'margin_percentage';
+@use 'margin_rem';
+
+@use 'padding_percentage';
+@use 'padding_rem';
+
+$spacing-zero: (
+    'm' 'margin',
+    'mt' 'margin-top',
+    'mr' 'margin-right',
+    'mb' 'margin-bottom',
+    'ml' 'margin-left',
+    'p' 'padding',
+    'pt' 'padding-top',
+    'pr' 'padding-right',
+    'pb' 'padding-bottom',
+    'pl' 'padding-left',
+);
+
+@each $tuple in $spacing-zero {
+    .#{nth($tuple, 1)}-0 {
+        #{nth($tuple, 2)}: 0;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    @each $tuple in $spacing-zero {
+        .tablet-#{nth($tuple, 1)}-0 {
+            #{nth($tuple, 2)}: 0;
+        }
+    }
+}
+@media only screen and (max-width: 767px) {
+    @each $tuple in $spacing-zero {
+        .landscape-#{nth($tuple, 1)}-0 {
+            #{nth($tuple, 2)}: 0;
+        }
+    }
+}
+@media only screen and (max-width: 478px) {
+    @each $tuple in $spacing-zero {
+        .portrait-#{nth($tuple, 1)}-0 {
+            #{nth($tuple, 2)}: 0;
+        }
+    }
+}

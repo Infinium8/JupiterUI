@@ -1,0 +1,100 @@
+@use 'container';
+@use 'textarea';
+
+$sizes: (
+	'app': (
+		'0.25rem 0.35rem' '0.875rem'
+	),
+	'xs': (
+		'0.5rem 0.75rem' '0.875rem'
+	),
+	'sm': (
+		'0.75rem 1rem' '1rem'
+	),
+	'md': (
+		'1rem 1.375rem' '1.125rem'
+	),
+	'lg': (
+		'1.125rem 1rem' '1.25rem'
+	),
+);
+
+.j-input {
+	width: 100%;
+	background-color: var(--ui);
+	border-style: solid;
+	border: 2px solid var(--ui-3);
+	border-radius: var(--input-radius);
+	font-size: 1rem;
+	color: var(--text-color);
+	outline: none;
+	padding: 0 0.75rem;
+	height: 2.75rem;
+	margin-bottom: 1rem;
+
+	&:hover {
+		border-color: var(--ui-4);
+	}
+	&:focus {
+		border-color: var(--accent);
+		box-shadow: 0px 0px 1.5rem -0.75rem var(--accent);
+	}
+
+	body:not([data-motion="false"]) & {
+		transition: var(--duration-moderate-01) ease;
+	}
+	body[data-motion="false"] &:focus {
+		box-shadow: none !important;
+	}
+
+	@each $size, $tuple in $sizes {
+		&.#{$size} {
+			height: auto !important;
+			padding: #{nth($tuple, 1)} !important;
+			font-size: #{nth($tuple, 2)} !important;
+		}
+	}
+
+	&.yinyang:focus {
+		border-color: var(--text-color);
+		box-shadow: 0px 0px 1.5rem -0.75rem var(--text-color);
+	}
+
+	&.thin {
+		border-width: 1px !important;
+	}
+
+	&.no-shadow:focus {
+		box-shadow: none !important;
+	}
+	&.shadow-xs:focus {
+		box-shadow: 0px 0px 1.5rem -1rem var(--accent);
+	}
+	&.shadow-sm:focus {
+		box-shadow: 0px 0px 1.5rem -0.75rem var(--accent);
+	}
+
+	&.bg-red-01, &.bg-red-10, &.error {
+		border-color: var(--red-60);
+		background-color: var(--red-10);
+	}
+	body.dark &.bg-red-01, body.dark &.bg-red-10, body.dark &.error {
+		background-color: var(--red-100);
+	}
+	&.bg-red-01:focus, &.bg-red-10:focus, &.error:focus {
+		background-color: var(--ui) !important;
+		border-color: var(--accent);
+	}
+
+	&.bg-green-01, &.bg-green-10, &.success {
+		border-color: var(--green-40);
+		background-color: var(--green-10);
+	}
+	body.dark &.bg-green-01, body.dark &.bg-green-10, body.dark &.success {
+		background-color: var(--green-90);
+	}
+	&.bg-green-01:focus, &.bg-green-10:focus, &.success:focus {
+		background-color: var(--ui) !important;
+		border-color: var(--accent);
+	}
+}

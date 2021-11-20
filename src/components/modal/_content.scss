@@ -1,0 +1,97 @@
+.j-modal-content {
+	width: 100%;
+	padding: 1rem;
+	max-width: 35rem;
+	max-height: 44rem;
+	background: var(--ui);
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	flex-direction: column;
+
+	overflow-y: scroll;
+	scrollbar-width: thin;
+	scrollbar-color: var(--ui-2) var(--ui);
+
+	body.dark & {
+		background-color: var(--ui-1);
+		scrollbar-color: var(--ui-2) var(--ui-1);
+	}
+}
+.j-modal-inner-content {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-direction: column;
+}
+.j-modal-subtitle {
+	opacity: 0.6;
+	margin-bottom: 0.5rem;
+}
+.j-modal-buttons {
+	width: 100%;
+	padding: 0 1rem 1rem 1rem;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 1rem;
+	background: var(--ui);
+
+	body.dark & {
+		background-color: var(--ui-1);
+	}
+}
+.j-modal-button {
+	padding: 0.75rem 1rem;
+	font-size: 1rem;
+	border-radius: var(--button-radius);
+	background: transparent;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: var(--text-color);
+	background: var(--ui-2);
+	transition: var(--duration-moderate-01) ease;
+
+	// body.dark &:nth-child(1) {
+	// 	background-color: var(--ui);
+	// }
+}
+.j-modal-button:nth-child(2) {
+	background: var(--accent);
+	color: white;
+}
+.j-modal-button:hover {
+	opacity: 0.8;
+}
+.j-modal-button i {
+	margin-left: 1rem;
+}
+
+@media only screen and (max-width: 740px) {
+	.j-modal-buttons {
+		grid-template-columns: auto;
+		grid-template-rows: auto auto;
+	}
+	.j-modal-button {
+		padding: 0.75rem 1rem;
+	}
+}
+
+.j-modal-close {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	padding: 0.5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--ui-1);
+	border-radius: 90px;
+	color: var(--text-color);
+	transition: var(--duration-fast-02) var(--expressive-standard);
+
+	&:hover {
+		transform: scale(1.05);
+	}
+}

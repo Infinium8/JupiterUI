@@ -1,0 +1,32 @@
+.j-input-container {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+	margin-bottom: 1rem;
+
+	& .j-input {
+		padding-left: 2rem;
+		margin-bottom: 0;
+
+		&::placeholder {
+			color: var(--text-color-06);
+			opacity: 1;
+		}
+
+		&:-ms-input-placeholder {
+			color: var(--text-color-06);
+		}
+
+		&::-ms-input-placeholder {
+			color: var(--text-color-06);
+		}
+	}
+
+	& > i {
+		color: var(--text-color-06);
+		position: absolute;
+		left: 0.5rem;
+	}
+}

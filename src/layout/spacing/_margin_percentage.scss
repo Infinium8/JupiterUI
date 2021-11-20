@@ -1,0 +1,194 @@
+//
+// PERCENTAGE = append "p" to end of class.
+//
+// MOBILIZED
+//
+// Classes for:
+// margin = m
+// margin top & bottom = my, mv
+// margin left & right = mx, mh
+// margin-top = mt
+// margin-right = mr
+// margin-bottom = mb
+// margin-left = ml
+//
+
+@use '../../variables';
+
+@each $name in variables.$spacing-percent {
+	.m-#{$name}p {
+		margin: #{$name}#{'%'};
+	}
+}
+
+@each $name in variables.$spacing-percent {
+	.my-#{$name}p,
+	.mv-#{$name}p {
+		margin-top: #{$name}#{'%'};
+		margin-bottom: #{$name}#{'%'};
+	}
+}
+
+@each $name in variables.$spacing-percent {
+	.mx-#{$name}p,
+	.mh-#{$name}p {
+		margin-right: #{$name}#{'%'};
+		margin-left: #{$name}#{'%'};
+	}
+}
+
+@each $name in variables.$spacing-percent {
+	.mt-#{$name}p {
+		margin-top: #{$name}#{'%'};
+	}
+}
+@each $name in variables.$spacing-percent {
+	.mr-#{$name}p {
+		margin-right: #{$name}#{'%'};
+	}
+}
+@each $name in variables.$spacing-percent {
+	.mb-#{$name}p {
+		margin-bottom: #{$name}#{'%'};
+	}
+}
+@each $name in variables.$spacing-percent {
+	.ml-#{$name}p {
+		margin-left: #{$name}#{'%'};
+	}
+}
+
+@media only screen and (max-width: 991px) {
+	@each $name in variables.$spacing-percent {
+		.tablet-m-#{$name}p {
+			margin: #{$name}#{'%'};
+		}
+	}
+
+	@each $name in variables.$spacing-percent {
+		.tablet-my-#{$name}p,
+		.tablet-mv-#{$name}p {
+			margin-top: #{$name}#{'%'};
+			margin-bottom: #{$name}#{'%'};
+		}
+	}
+
+	@each $name in variables.$spacing-percent {
+		.tablet-mx-#{$name}p,
+		.tablet-mh-#{$name}p {
+			margin-right: #{$name}#{'%'};
+			margin-left: #{$name}#{'%'};
+		}
+	}
+
+	@each $name in variables.$spacing-percent {
+		.tablet-mt-#{$name}p {
+			margin-top: #{$name}#{'%'};
+		}
+	}
+	@each $name in variables.$spacing-percent {
+		.tablet-mr-#{$name}p {
+			margin-right: #{$name}#{'%'};
+		}
+	}
+	@each $name in variables.$spacing-percent {
+		.tablet-mb-#{$name}p {
+			margin-bottom: #{$name}#{'%'};
+		}
+	}
+	@each $name in variables.$spacing-percent {
+		.tablet-ml-#{$name}p {
+			margin-left: #{$name}#{'%'};
+		}
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	@each $name in variables.$spacing-percent {
+		.landscape-m-#{$name}p {
+			margin: #{$name}#{'%'};
+		}
+	}
+
+	@each $name in variables.$spacing-percent {
+		.landscape-my-#{$name}p,
+		.landscape-mv-#{$name}p {
+			margin-top: #{$name}#{'%'};
+			margin-bottom: #{$name}#{'%'};
+		}
+	}
+
+	@each $name in variables.$spacing-percent {
+		.landscape-mx-#{$name}p,
+		.landscape-mh-#{$name}p {
+			margin-right: #{$name}#{'%'};
+			margin-left: #{$name}#{'%'};
+		}
+	}
+
+	@each $name in variables.$spacing-percent {
+		.landscape-mt-#{$name}p {
+			margin-top: #{$name}#{'%'};
+		}
+	}
+	@each $name in variables.$spacing-percent {
+		.landscape-mr-#{$name}p {
+			margin-right: #{$name}#{'%'};
+		}
+	}
+	@each $name in variables.$spacing-percent {
+		.landscape-mb-#{$name}p {
+			margin-bottom: #{$name}#{'%'};
+		}
+	}
+	@each $name in variables.$spacing-percent {
+		.landscape-ml-#{$name}p {
+			margin-left: #{$name}#{'%'};
+		}
+	}
+}
+
+@media only screen and (max-width: 478px) {
+	@each $name in variables.$spacing-percent {
+		.portrait-m-#{$name}p {
+			margin: #{$name}#{'%'};
+		}
+	}
+
+	@each $name in variables.$spacing-percent {
+		.portrait-my-#{$name}p,
+		.portrait-mv-#{$name}p {
+			margin-top: #{$name}#{'%'};
+			margin-bottom: #{$name}#{'%'};
+		}
+	}
+
+	@each $name in variables.$spacing-percent {
+		.portrait-mx-#{$name}p,
+		.portrait-mh-#{$name}p {
+			margin-right: #{$name}#{'%'};
+			margin-left: #{$name}#{'%'};
+		}
+	}
+
+	@each $name in variables.$spacing-percent {
+		.portrait-mt-#{$name}p {
+			margin-top: #{$name}#{'%'};
+		}
+	}
+	@each $name in variables.$spacing-percent {
+		.portrait-mr-#{$name}p {
+			margin-right: #{$name}#{'%'};
+		}
+	}
+	@each $name in variables.$spacing-percent {
+		.portrait-mb-#{$name}p {
+			margin-bottom: #{$name}#{'%'};
+		}
+	}
+	@each $name in variables.$spacing-percent {
+		.portrait-ml-#{$name}p {
+			margin-left: #{$name}#{'%'};
+		}
+	}
+}

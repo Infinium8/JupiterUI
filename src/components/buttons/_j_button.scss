@@ -1,0 +1,222 @@
+@use '../../variables';
+
+$sizes: (
+	'app': (
+		'0.25rem' '0.875rem'
+	),
+	'xs': (
+		'0.5rem 0.75rem' '0.875rem'
+	),
+	'sm': (
+		'0.75rem 1rem' '1rem'
+	),
+	'md': (
+		'1rem 1.375rem' '1.125rem'
+	),
+	'lg': (
+		'1.125rem 2rem' '1.25rem'
+	),
+);
+
+.j-button {
+	padding: 0.75rem 1.25rem;
+	color: white !important;
+	font-size: 1rem;
+	font-weight: 500;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--accent);
+	border-radius: var(--button-radius);
+	text-decoration: none;
+	white-space: nowrap;
+	cursor: pointer;
+	transition: var(--duration-moderate-01) var(--productive-standard);
+
+	&:hover {
+		opacity: 0.9;
+	}
+
+	&.full:hover {
+		opacity: 1;
+	}
+
+	body:not([data-motion="false"]) &:hover {
+		transform: translateY(-2px);
+	}
+	body:not([data-motion="false"]) &:active {
+		transform: scale(0.99);
+	}
+
+	&.give-border {
+		padding: 0.6875rem 1.1875rem;
+
+		background-color: var(--ui) !important;
+		border: 1px solid var(--ui-3);
+		color: var(--text-color) !important;
+		box-shadow: 0px 0px 3px 0px rgba(50, 50, 50, 0.25);
+
+		body.dark & {
+			border-color: var(--ui-2);
+		}
+
+		&.no-emphasis {
+			box-shadow: 0px 0px 0px 0px rgba(50, 50, 50, 0.25);
+		}
+		&.emphasize-xs {
+			box-shadow: 0px 0px 1px 0px rgba(50, 50, 50, 0.25);
+		}
+		&.emphasize-sm {
+			box-shadow: 0px 0px 2px 0px rgba(50, 50, 50, 0.25);
+		}
+		&.emphasize-md {
+			box-shadow: 0px 0px 4px 0px rgba(50, 50, 50, 0.25);
+		}
+		&.emphasize-lg {
+			box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.25);
+		}
+	}
+
+	&.no-push:hover {
+		transform: translateY(0) !important;
+	}
+
+	@each $size, $tuple in $sizes {
+		&.#{$size} {
+			height: auto;
+			padding: #{nth($tuple, 1)};
+			font-size: #{nth($tuple, 2)};
+		}
+	}
+
+	// Modifiers
+	&.gray {
+		background: var(--ui-1);
+		color: var(--text-color-1) !important;
+
+		&:hover {
+			background: var(--ui-2);
+		}
+	}
+
+	&.minimal {
+		background: transparent;
+		color: var(--text-color-1) !important;
+
+		&:hover {
+			background: var(--ui-1);
+		}
+	}
+
+	&.ghost {
+		background: transparent;
+		color: var(--text-color-1) !important;
+
+		&:hover {
+			background: transparent;
+		}
+	}
+
+	&.colored-ui {
+		background-color: var(--ui);
+		color: var(--text-color) !important;
+	}
+
+	&.rounded {
+		border-radius: 90px;
+	}
+
+	@each $color in variables.$interactive-colors {
+		&.#{$color} {
+			background-color: var(--#{$color}-60);
+			color: white;
+		}
+	}
+
+	& .j-loader {
+		margin-top: 3px;
+		border-color: var(--gray-10)!important;
+		border-top-color: var(--accent) !important;
+	}
+
+
+	// Morph button
+	&.morph {
+		&:not(.hide-before) {
+			box-shadow: 0px 0px 0px 3px var(--accent-20);
+		}
+
+		&:hover {
+			opacity: 1;
+			transform: translateY(0) !important;
+			box-shadow: 0px 0px 0px 5px var(--accent-20);
+		}
+
+		&:active {
+			box-shadow: 0px 0px 0px 4px var(--accent-20);
+		}
+
+		body.dark & {
+			&:not(.hide-before) {
+				box-shadow: 0px 0px 0px 3px var(--accent-90);
+			}
+
+			&:hover {
+				box-shadow: 0px 0px 0px 5px var(--accent-90);
+			}
+
+			&:active {
+				box-shadow: 0px 0px 0px 4px var(--accent-90);
+			}
+		}
+	}
+
+	&.force-height {
+		height: 2.625rem !important;
+	}
+}
+
+// Icons
+.j-button .j-icon,
+.j-button i {
+	margin-left: 0.5rem;
+	width: 1.25rem;
+	height: 1.25rem;
+}
+.j-button.icon-only .j-icon,
+.j-button.icon-only i {
+	margin-left: 0;
+}
+.j-button .j-icon.to-left,
+.j-button i.to-left {
+	margin-left: 0;
+	margin-right: 0.5rem;
+}
+
+@media only screen and (max-width: 991px) {
+	@each $size, $tuple in $sizes {
+		.j-button.tablet-#{$size} {
+			height: auto;
+			padding: #{nth($tuple, 1)};
+			font-size: #{nth($tuple, 2)};
+		}
+	}
+}
+@media only screen and (max-width: 767px) {
+	@each $size, $tuple in $sizes {
+		.j-button.landscape-#{$size} {
+			height: auto;
+			padding: #{nth($tuple, 1)};
+			font-size: #{nth($tuple, 2)};
+		}
+	}
+}
+@media only screen and (max-width: 478px) {
+	@each $size, $tuple in $sizes {
+		.j-button.portrait-#{$size} {
+			height: auto;
+			padding: #{nth($tuple, 1)};
+			font-size: #{nth($tuple, 2)};
+		}
+	}
+}

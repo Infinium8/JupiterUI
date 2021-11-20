@@ -1,0 +1,85 @@
+// Underline
+.j-link.underline {
+	display: block;
+	padding: 0.25rem 0;
+	color: var(--text-color);
+
+	&:hover {
+		opacity: 1;
+	}
+
+	&::before,
+	&::after {
+		border-radius: 90px;
+	}
+
+	&.no-bg::before {
+		display: none !important;
+	}
+
+	&::before {
+		content: '';
+		height: 2px;
+		width: 100%;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		background-color: var(--ui-2);
+		z-index: 7;
+	}
+
+	&::after {
+		content: '';
+		height: 2px;
+		width: 0;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		background-color: currentColor;
+		transition: var(--duration-moderate-02) var(--expressive-standard);
+		z-index: 8;
+	}
+
+	&:hover::after {
+		width: 100%;
+	}
+
+	&.alt::after {
+		border-radius: 0 !important;
+		width: 100% !important;
+		transition: var(--duration-moderate-01) var(--expressive-standard) !important;
+	}
+	&.alt:hover::after {
+		height: 0.2em;
+	}
+
+	&.md,
+	&.lg,
+	&.xl,
+	&.xxl {
+		&::before,
+		&::after {
+			height: 3px;
+		}
+	}
+
+	&.thin {
+		&::before,
+		&::after {
+			height: 1px !important;
+		}
+	}
+
+	&.md {
+		font-size: 1.25rem;
+	}
+	&.lg {
+		font-size: 1.5rem;
+	}
+	&.xl {
+		font-size: 1.75rem;
+	}
+	&.xxl {
+		font-size: 2rem;
+	}
+}

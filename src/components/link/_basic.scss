@@ -1,0 +1,44 @@
+// Basic
+.j-link {
+	color: var(--accent);
+	font-weight: 500;
+	position: relative;
+	text-decoration: none;
+	user-select: auto !important;
+	transition: var(--duration-moderate-01) var(--expressive-standard);
+
+	&:hover {
+		opacity: 0.7;
+	}
+
+	&:active {
+		opacity: 0.8 !important;
+	}
+
+	&.nowrap {
+		white-space: nowrap;
+	}
+
+	&.sm {
+		font-size: 0.875rem;
+		font-weight: 400;
+	}
+	&.md {
+		font-size: 1rem;
+	}
+	&.lg {
+		font-size: 1.25rem;
+	}
+	&.xl {
+		font-size: 1.5rem;
+	}
+
+	&.push {
+		transition: var(--duration-moderate-01) var(--expressive-standard);
+
+		&:hover {
+			transform: translateY(-2px);
+			opacity: 0.85;
+		}
+	}
+}

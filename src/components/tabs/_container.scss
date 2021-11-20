@@ -1,0 +1,81 @@
+.j-tab-links {
+	border-radius: var(--tab-radius);
+	background-color: var(--ui-1);
+	padding: 0.25rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: row;
+
+	&.as-anchor {
+		position: sticky;
+		top: 6rem;
+		z-index: 9999;
+	}
+
+	@media only screen and (max-width: 478px) {
+		&.portrait-fixed {
+			position: fixed;
+			bottom: 0;
+			right: 0;
+			left: 0;
+			width: 100%;
+			height: 10vh;
+			padding: 0.5rem 1.25rem;
+			justify-content: center !important;
+			align-items: flex-start;
+		}
+		&.portrait-fixed .j-tab-link {
+			flex-direction: column;
+			& i {
+				margin-right: 0 !important;
+				margin-bottom: 0.5rem;
+			}
+
+			&,
+			& p {
+				font-size: 0.75rem;
+				opacity: 0.8;
+			}
+		}
+	}
+
+	&.allow-overscroll {
+		overflow-x: scroll;
+		max-width: 100%;
+		justify-content: flex-start;
+
+		scrollbar-width: 0;
+		scrollbar-color: transparent transparent;
+
+		::-webkit-scrollbar {
+			display: none;
+		}
+		::-webkit-scrollbar-track {
+			display: none;
+		}
+	}
+
+	body.dark & {
+		background-color: var(--ui-2);
+	}
+
+	body.dark & .j-tab-link.active {
+		background-color: var(--ui);
+	}
+
+	&.round {
+		padding: 0;
+		border-radius: 90px;
+
+		& .j-tab-link {
+			border-radius: 90px !important;
+			padding: 0.75rem 1rem;
+		}
+	}
+}
+
+.j-tab-links.active-accent .j-tab-link.active {
+	background-color: var(--accent) !important;
+	color: white !important;
+}

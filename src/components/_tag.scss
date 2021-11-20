@@ -1,0 +1,39 @@
+@use '../variables';
+
+.j-tag {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: var(--border-radius);
+	background-color: var(--accent-10);
+	padding: 0.5rem 0.75rem;
+	color: var(--accent);
+	font-weight: 500;
+	white-space: nowrap;
+	margin-bottom: 1.5rem;
+	margin-right: 0.5rem;
+
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+
+	&.rounded {
+		border-radius: 90px;
+	}
+
+	@each $color in variables.$colors {
+		&.#{$color} {
+			background-color: var(--#{$color}-10);
+			color: var(--#{$color}-60);
+		}
+
+		body.dark &.#{$color} {
+			background-color: var(--#{$color}-20) !important;
+		}
+	}
+
+	&.sm {
+		padding: 0.25rem 0.5rem;
+		font-size: 0.85rem;
+	}
+}

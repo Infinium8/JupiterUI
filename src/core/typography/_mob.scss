@@ -1,0 +1,76 @@
+@use "styles";
+
+@media only screen and (max-width: 991px) {
+	.tablet-text-l {
+		text-align: left;
+	}
+	.tablet-text-c {
+		text-align: center;
+	}
+	.tablet-text-r {
+		text-align: right;
+	}
+
+	h1 {
+		font-size: 2.625rem;
+	}
+	h2 {
+		font-size: 2.375rem;
+	}
+
+	@each $tuple in styles.$font-sizes {
+		.tablet-fs-#{nth($tuple, 1)} {
+			font-size: #{nth($tuple, 2)}#{'rem'} !important;
+			line-height: #{nth($tuple, 3)}#{'rem'} !important;
+		}
+	}
+}
+@media only screen and (max-width: 767px) {
+	.landscape-text-l {
+		text-align: left;
+	}
+	.landscape-text-c {
+		text-align: center;
+	}
+	.landscape-text-r {
+		text-align: right;
+	}
+
+	h1 {
+		font-size: 2.375rem;
+	}
+	h2 {
+		font-size: 2.125;
+	}
+	h3 {
+		font-size: 1.625rem;
+	}
+	h4 {
+		font-size: 1.3125rem;
+	}
+
+	@each $tuple in styles.$font-sizes {
+		.landscape-fs-#{nth($tuple, 1)} {
+			font-size: #{nth($tuple, 2)}#{'rem'} !important;
+			line-height: #{nth($tuple, 3)}#{'rem'} !important;
+		}
+	}
+}
+@media only screen and (max-width: 478px) {
+	.portrait-text-l {
+		text-align: left;
+	}
+	.portrait-text-c {
+		text-align: center;
+	}
+	.portrait-text-r {
+		text-align: right;
+	}
+
+	@each $tuple in styles.$font-sizes {
+		.portrait-fs-#{nth($tuple, 1)} {
+			font-size: #{nth($tuple, 2)}#{'rem'} !important;
+			line-height: #{nth($tuple, 3)}#{'rem'} !important;
+		}
+	}
+}

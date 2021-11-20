@@ -1,0 +1,13 @@
+$positions: (
+    'top' 'left',
+    'top' 'right',
+    'bottom' 'left',
+    'bottom' 'right',
+    'center' 'center'
+);
+
+@each $one, $two in $positions {
+    .transform-origin-#{$one}-#{$two} {
+        transform-origin: #{$one} #{$two} !important;
+    }
+}

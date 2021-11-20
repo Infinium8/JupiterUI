@@ -1,0 +1,30 @@
+@use '../variables';
+
+// Animations
+@for $i from 1 through 20 {
+	$ms: $i * 100;
+
+	.duration-#{$ms} {
+		animation-duration: #{$ms}#{'ms'} !important;
+	}
+}
+
+@for $i from 1 through 100 {
+	$ms: $i * 100;
+
+	.delay-#{$ms} {
+		animation-delay: #{$ms}#{'ms'} !important;
+	}
+}
+
+@each $easing in variables.$basic_easings {
+	.timing-#{$easing} {
+		animation-timing-function: #{$easing} !important;
+	}
+}
+
+@each $easing in variables.$easings {
+	.timing-#{$easing} {
+		animation-timing-function: var(--#{$easing}) !important;
+	}
+}

@@ -1,0 +1,82 @@
+@use '../../variables';
+
+.j-tile {
+	& .j-tile-check {
+		position: absolute;
+		top: 1rem;
+		right: 1rem;
+		background-color: var(--text-color);
+		color: var(--ui);
+		border-radius: 90px;
+		padding: 0.15rem;
+		transition: var(--duration-moderate-01) var(--productive-standard);
+	
+		opacity: 0;
+		transform: scale(0);
+	
+		& i {
+			width: 0.85rem;
+			height: 0.85rem;
+			opacity: 0;
+		}
+	}
+	
+	&.selected {	
+		.j-tile-check {
+			opacity: 1;
+			transform: scale(1);
+
+			& i {
+				opacity: 1;
+			}
+		}
+		@each $color in variables.$interactive-colors {
+			&.#{$color} {	
+				.j-tile-check {
+					background-color: var(--#{$color}-60);
+					border-color: var(--#{$color}-60);
+
+					& i {
+						opacity: 1;
+						color: white;
+					}
+				}
+			}
+		}
+	}
+}
+
+.j-tiles {
+	&.is-noticeable {
+		& .j-tile-check {
+			opacity: 1;
+			transform: scale(1);
+			border: 1px solid var(--text-color-05);
+			background-color: transparent;
+
+			& i {
+				opacity: 0;
+			}
+		}
+
+		.j-tile.selected {	
+			.j-tile-check {
+				opacity: 1;
+				transform: scale(1);
+				background-color: var(--text-color);
+
+				& i {
+					opacity: 1;
+				}
+			}
+			@each $color in variables.$interactive-colors {
+				&.#{$color} {	
+					.j-tile-check {
+						background-color: var(--#{$color}-60);
+						border-color: var(--#{$color}-60);
+					}
+				}
+			}
+		}
+	}
+}

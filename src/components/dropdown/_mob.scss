@@ -1,0 +1,25 @@
+// Mobile
+@media only screen and (max-width: 991px) {
+	.j-dropdown.tablet-relative-right .j-dropdown-menu {
+		right: 0;
+	}
+	.j-dropdown.tablet-relative-left .j-dropdown-menu {
+		left: 0;
+	}
+}
+@media only screen and (max-width: 767px) {
+	.j-dropdown.landscape-relative-right .j-dropdown-menu {
+		right: 0;
+	}
+	.j-dropdown.landscape-relative-left .j-dropdown-menu {
+		left: 0;
+	}
+}
+@media only screen and (max-width: 478px) {
+	.j-dropdown.portrait-relative-right .j-dropdown-menu {
+		right: 0;
+	}
+	.j-dropdown.portrait-relative-left .j-dropdown-menu {
+		left: 0;
+	}
+}

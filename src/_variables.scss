@@ -1,0 +1,161 @@
+$breakpoints: (
+	'tablet',
+	'landscape',
+	'portrait'
+);
+
+// Theme
+$accent: var(--cyan-40);
+$accent-10: var(--cyan-10);
+$accent-20: var(--cyan-20);
+$accent-30: var(--cyan-30);
+$accent-40: var(--cyan-40);
+$accent-50: var(--cyan-50);
+$accent-60: var(--cyan-60);
+$accent-70: var(--cyan-70);
+$accent-80: var(--cyan-80);
+$accent-90: var(--cyan-90);
+$accent-100: var(--cyan-100);
+
+// Colors
+$ui: 'ui-10', 'ui-20', 'ui-30', 'ui-40', 'ui-50', 'ui-60', 'ui-70', 'ui-80', 'ui-90', 'ui-100';
+$colors: 'accent', 'red', 'magenta', 'purple', 'blue', 'cyan', 'teal', 'green', 'orange', 'cool-gray', 'gray', 'warm-gray';
+$interactive-colors: 'accent', 'red', 'magenta', 'purple', 'blue', 'cyan', 'teal', 'green', 'orange';
+$shades: 'cool-gray', 'warm-gray', 'gray';
+$color-weights: '10', '20', '30', '40', '50', '60', '70', '80', '90', '100';
+
+$uis: (
+	'ui',
+	'ui-1',
+	'ui-2',
+	'ui-3',
+	'ui-4',
+	'ui-5',
+	'ui-6',
+	'ui-7',
+	'ui-8',
+	'ui-9',
+	'ui-10',
+);
+
+$basic-colors: 'white' 'white', 'white-08' 'rgba(255, 255, 255, 0.8)', 'white-06' 'rgba(255, 255, 255, 0.6)', 'white-04' 'rgba(255, 255, 255, 0.4)', 'white-02' 'rgba(255, 255, 255, 0.2)', 'black' 'black', 'black-08' 'rgba(0, 0, 0, 0.8)', 'black-06' 'rgba(0, 0, 0, 0.6)', 'black-04' 'rgba(0, 0, 0, 0.4)', 'black-02' 'rgba(0, 0, 0, 0.2)';
+$dynamic-colors: 'dynamic' 'text-color', 'dynamic-09' 'text-color-09', 'dynamic-08' 'text-color-08', 'dynamic-07' 'text-color-07', 'dynamic-06' 'text-color-06', 'dynamic-05' 'text-color-05', 'dynamic-04' 'text-color-04', 'dynamic-03' 'text-color-03', 'dynamic-02' 'text-color-02';
+
+$ui-light: (
+	'ui' 'var(--warm-gray-0)',
+	'ui-1' 'var(--warm-gray-10)',
+	'ui-2' 'var(--warm-gray-20)',
+	'ui-3' 'var(--warm-gray-30)',
+	'ui-4' 'var(--warm-gray-40)',
+	'ui-5' 'var(--warm-gray-50)',
+	'ui-6' 'var(--warm-gray-60)',
+	'ui-7' 'var(--warm-gray-70)',
+	'ui-8' 'var(--warm-gray-80)',
+	'ui-9' 'var(--warm-gray-90)',
+	'ui-10' 'var(--warm-gray-100)',
+	'ui-yinyang' 'var(--warm-gray-1000)',
+	'ui-blur' 'rgba(255, 255, 255, 0.8)',
+	'ui-blur-fallback' 'rgba(255, 255, 255, 0.98)',
+	'text-color' '#161616',
+	'text-color-1' 'rgba(0, 0, 0, 0.54)',
+	'text-color-09' 'rgba(0, 0, 0, 0.9)',
+	'text-color-08' 'rgba(0, 0, 0, 0.8)',
+	'text-color-07' 'rgba(0, 0, 0, 0.7)',
+	'text-color-06' 'rgba(0, 0, 0, 0.6)',
+	'text-color-05' 'rgba(0, 0, 0, 0.5)',
+	'text-color-04' 'rgba(0, 0, 0, 0.4)',
+	'text-color-03' 'rgba(0, 0, 0, 0.3)',
+	'text-color-02' 'rgba(0, 0, 0, 0.2)',
+	'text-color-012' 'rgba(0, 0, 0, 0.12)',
+	'text-color-006' 'rgba(0, 0, 0, 0.06)',
+);
+
+$ui-dark: (
+	'ui' 'var(--warm-gray-100)',
+	'ui-1' 'var(--warm-gray-90)',
+	'ui-2' 'var(--warm-gray-80)',
+	'ui-3' 'var(--warm-gray-70)',
+	'ui-4' 'var(--warm-gray-60)',
+	'ui-5' 'var(--warm-gray-50)',
+	'ui-6' 'var(--warm-gray-40)',
+	'ui-7' 'var(--warm-gray-30)',
+	'ui-8' 'var(--warm-gray-20)',
+	'ui-9' 'var(--warm-gray-10)',
+	'ui-10' 'var(--warm-gray-0)',
+	'ui-yinyang' 'var(--warm-gray-0)',
+	'ui-blur' 'rgba(0, 0, 0, 0.8)',
+	'ui-blur-fallback' 'rgba(0, 0, 0, 0.95)',
+	'text-color' '#fbfbfb',
+	'text-color-1' 'rgba(255, 255, 255, 0.7)',
+	'text-color-09' 'rgba(255, 255, 255, 0.9)',
+	'text-color-08' 'rgba(255, 255, 255, 0.8)',
+	'text-color-07' 'rgba(255, 255, 255, 0.7)',
+	'text-color-06' 'rgba(255, 255, 255, 0.6)',
+	'text-color-05' 'rgba(255, 255, 255, 0.5)',
+	'text-color-04' 'rgba(255, 255, 255, 0.4)',
+	'text-color-03' 'rgba(255, 255, 255, 0.3)',
+	'text-color-02' 'rgba(255, 255, 255, 0.2)',
+	'text-color-012' 'rgba(255, 255, 255, 0.12)',
+	'text-color-006' 'rgba(255, 255, 255, 0.06)',
+);
+
+// UI Shell
+$force-dark-bg: #161616;
+$force-dark-bg-hover: #262626;
+$force-dark-border: #0a0a0a;
+$force-dark-border-2: #393939;
+$force-dark-color: hsla(0, 0%, 100%, 0.8);
+$force-dark-color-hover: white;
+
+// Spacing
+$spacing-rem: '0' '0', '0-125' '0.125', '0-25' '0.25', '0-5' '0.5', '0-75' '0.75', '1' '1', '1-5' '1.5', '2' '2', '2-5' '2.5', '3' '3', '4' '4', '5' '5', '6' '6', '7' '7', '8' '8', '9' '9', '10' '10', '12' '12', '16' '16', '20' '20';
+$spacing-percent: '1', '2', '4', '8', '10', '12', '16', '20', '22', '24', '30';
+
+// Sizing
+$sizings: 'mw' 'max-width', 'w' 'width', 'h' 'height', 'mxh' 'max-height', 'mnw' 'min-width', 'mnh' 'min-height';
+$sizing-rem: '0' '0', '0-125' '0.125', '0-25' '0.25', '0-5' '0.5', '0-75' '0.75', '1' '1', '1-5' '1.5', '1-75' '1.75', '2' '2', '2-5' '2.5', '2-75' '2.75', '3' '3', '3-25' '3.25', '3-5' '3.5', '3-75' '3.75', '4' '4', '5' '5', '6' '6', '7' '7', '8' '8', '9' '9', '10' '10', '11' '11', '12' '12', '14' '14', '16' '16', '20' '20', '25' '25', '30' '30', '32' '32', '35' '35', '38' '38', '40' '40', '42' '42', '44' '44', '50' '50', '60' '60', '70' '70', '80' '80', '85' '85', '90' '90', '100' '100', '110' '110', '120' '120', '130' '130';
+
+// Typography
+$font-stack: 'Roboto', -apple-system, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+// Motion
+$easings: (
+	'productive-standard',
+	'expressive-standard',
+	'productive-entrance',
+	'expressive-entrance',
+	'productive-exit',
+	'expressive-exit',
+	'p-s',
+	'e-s',
+	'p-e',
+	'e-e',
+	'p-exit',
+	'e-exit'
+);
+$duration_vars: (
+	'duration-fast-01',
+	'duration-fast-02',
+	'duration-moderate-01',
+	'duration-moderate-02',
+	'duration-slow-01',
+	'duration-slow-02',
+	'd-f-1',
+	'd-f-2',
+	'd-m-1',
+	'd-m-2',
+	'd-s-1',
+	'd-s-2',
+);
+$basic_easings: 'ease' 'ease-in' 'ease-out' 'ease-in-out';
+
+// View sizes (for .container)
+$view: (
+	'view-sm': '60%',
+	'view-md': '65%',
+	'view-fit': '75%',
+	'view-default': '80%',
+	'view-lg': '92%',
+	'view-xl': '96%',
+	'view-full': '100%',
+);

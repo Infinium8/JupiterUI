@@ -1,0 +1,55 @@
+@use '../../variables';
+
+.j-tile {
+	padding: 1rem;
+	background-color: var(--ui-1);
+	border: 2px solid transparent;
+	border-radius: var(--tile-radius);
+	position: relative;
+	transition: var(--duration-moderate-01) var(--productive-standard);
+
+	&.transparent {
+		background-color: transparent;
+	}
+
+	&.no-hover:hover {
+		background-color: var(--ui-1) !important;
+	}
+
+	&.darker {
+		background-color: var(--ui-2);
+	}
+
+	&.clickable {
+		cursor: pointer;
+		user-select: none;
+
+		&:hover {
+			transform: translateY(-2px);
+		}
+		&:active {
+			transform: translateY(0);
+		}
+	}
+
+	&.selectable {
+		cursor: pointer;
+		user-select: none;
+		transition: var(--duration-fast-01) var(--expressive-standard);
+
+		&:hover {
+			background-color: var(--ui-2);
+		}
+	}
+
+	&.selected {
+		user-select: none;
+		border-color: var(--text-color);
+		
+		@each $color in variables.$interactive-colors {
+			&.#{$color} {
+				border-color: var(--#{$color}-60);
+			}
+		}
+	}
+}
