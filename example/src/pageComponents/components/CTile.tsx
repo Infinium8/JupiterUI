@@ -1,4 +1,4 @@
-import Section from './Section';
+import Section from '../Section';
 import SelectableTile from '../../components/SelectableTile';
 
 const CTile = () => (

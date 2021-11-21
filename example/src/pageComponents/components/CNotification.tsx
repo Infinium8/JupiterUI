@@ -1,5 +1,5 @@
 import { icons } from '../../data/icons';
-import Section from './Section';
+import Section from '../Section';
 
 const CNotification = () => (
 	<Section>

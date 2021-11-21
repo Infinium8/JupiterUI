@@ -1,4 +1,4 @@
-import Section from './Section';
+import Section from '../Section';
 import Dropdown from '../../components/Dropdown';
 import { icons } from '../../data/icons';
 

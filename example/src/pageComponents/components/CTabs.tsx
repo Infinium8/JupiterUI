@@ -1,6 +1,6 @@
 import Tabs from '../../components/Tabs';
 import { icons } from '../../data/icons';
-import Section from './Section';
+import Section from '../Section';
 
 const CTabs = () => (
 	<Section>

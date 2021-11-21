@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Modal from '../../components/Modal';
 
-import Section from './Section';
+import Section from '../Section';
 
 const CModal = () => {
 	const [modal1, setModal1] = useState(false);

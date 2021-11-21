@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import Section from './Section';
+import Section from '../Section';
 
 const CTags = () => {
 	const mods = [

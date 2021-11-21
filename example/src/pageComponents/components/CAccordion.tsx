@@ -1,4 +1,4 @@
-import Section from './Section';
+import Section from '../Section';
 import Accordion from '../../components/Accordion';
 
 const CAccordion = () => (

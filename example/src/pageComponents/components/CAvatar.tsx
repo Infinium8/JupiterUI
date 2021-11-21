@@ -1,4 +1,4 @@
-import Section from './Section';
+import Section from '../Section';
 import classNames from 'classnames';
 
 const CAvatar = () => {
