@@ -2,7 +2,7 @@
 
 > An elegant and reliable UI kit for web artisans.
 
-Note: The live demo is in progress. Within the next day, everything will be properly setup. We're in the process of removing the default vanilla JavaScript from the previous iteration of Jupiter. Moreover, the [Wiki](https://codeberg.org/JupiterUI/JupiterUI/wiki) is a work in progress. It'll be populated with up-to-date documentation in the next day or so. Bear with us!
+## [Live demo](https://jupiter-ui.vercel.app/)
 
 **TL;DR** Visit the [Wiki](https://codeberg.org/JupiterUI/JupiterUI/wiki) to learn how to use Jupiter.
 
