@@ -5,7 +5,7 @@ const Text = ({ children }: ChildrenOnly) => (
 );
 
 const About = () => (
-	<section className='section'>
+	<section className='section border-bottom-ui-2'>
 		<div className='container flex-c'>
 			<div className='mw-50r'>
 				<h3>
