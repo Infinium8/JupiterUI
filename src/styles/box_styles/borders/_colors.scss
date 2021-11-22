@@ -33,7 +33,7 @@ $colors: '0' 'var(--ui)', '1' 'var(--ui-1)', '2' 'var(--ui-2)', '3' 'var(--ui-3)
 	border: 1px solid var(--text-color);
 }
 
-body.dark {
+html.dark {
 	@each $tuple in $colors {
 		& .dark-border-color-#{nth($tuple, 1)} {
 			border-color: #{nth($tuple, 2)};

@@ -89,10 +89,10 @@
 		z-index: 2;
 	}
 
-	body.dark & {
+	html.dark & {
 		background-color: var(--ui-1) !important;
 	}
-	body.dark &.with-indicator::before {
+	html.dark &.with-indicator::before {
 		background-image: linear-gradient(to bottom right, var(--ui-1) 50%, transparent 50%);
 	}
 
@@ -117,7 +117,7 @@
 	&.vertical.icons-only a {
 		border-right: none;
 	}
-	body.dark &.icons-only a {
+	html.dark &.icons-only a {
 		border-color: var(--ui);
 	}
 	&.icons-only li:last-of-type a {

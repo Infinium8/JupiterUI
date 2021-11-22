@@ -26,7 +26,7 @@
 .j-dropdown-menu li a:active > i, .j-dropdown-menu li button:active > i {
 	transform: scale(0.9);
 }
-body.dark .j-dropdown-menu li a:hover, body.dark .j-dropdown-menu li button:hover {
+html.dark .j-dropdown-menu li a:hover, html.dark .j-dropdown-menu li button:hover {
 	background-color: var(--ui-2);
 }
 
@@ -37,6 +37,6 @@ body.dark .j-dropdown-menu li a:hover, body.dark .j-dropdown-menu li button:hove
 .j-dropdown.items-bordered li:not(:last-child) a, .j-dropdown.items-bordered li:not(:last-child) button {
 	border-bottom: 1px solid var(--ui-2);
 }
-body.dark .j-dropdown.items-bordered li:not(:last-child) a, body.dark .j-dropdown.items-bordered li:not(:last-child) button {
+html.dark .j-dropdown.items-bordered li:not(:last-child) a, html.dark .j-dropdown.items-bordered li:not(:last-child) button {
 	border-bottom-color: var(--ui) !important;
 }

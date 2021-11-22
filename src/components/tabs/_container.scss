@@ -56,11 +56,11 @@
 		}
 	}
 
-	body.dark & {
+	html.dark & {
 		background-color: var(--ui-2);
 	}
 
-	body.dark & .j-tab-link.active {
+	html.dark & .j-tab-link.active {
 		background-color: var(--ui);
 	}
 

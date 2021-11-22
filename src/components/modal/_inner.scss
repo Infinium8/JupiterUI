@@ -22,7 +22,7 @@ body.light .j-modal-inner {
 		transition: var(--duration-moderate-02) var(--expressive-entrance);
 	}
 
-	body.dark & {
+	html.dark & {
 		background-color: var(--ui-1);
 	}
 

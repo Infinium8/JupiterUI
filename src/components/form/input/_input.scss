@@ -78,7 +78,7 @@ $sizes: (
 		border-color: var(--red-60);
 		background-color: var(--red-10);
 	}
-	body.dark &.bg-red-01, body.dark &.bg-red-10, body.dark &.error {
+	html.dark &.bg-red-01, html.dark &.bg-red-10, html.dark &.error {
 		background-color: var(--red-100);
 	}
 	&.bg-red-01:focus, &.bg-red-10:focus, &.error:focus {
@@ -90,7 +90,7 @@ $sizes: (
 		border-color: var(--green-40);
 		background-color: var(--green-10);
 	}
-	body.dark &.bg-green-01, body.dark &.bg-green-10, body.dark &.success {
+	html.dark &.bg-green-01, html.dark &.bg-green-10, html.dark &.success {
 		background-color: var(--green-90);
 	}
 	&.bg-green-01:focus, &.bg-green-10:focus, &.success:focus {

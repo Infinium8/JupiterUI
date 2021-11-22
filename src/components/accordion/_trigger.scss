@@ -19,7 +19,7 @@
 .j-accordion[aria-expanded="true"] > .j-acc-trigger {
 	border-color: var(--ui-1);
 }
-body.dark .j-accordion[aria-expanded="true"] > .j-acc-trigger {
+html.dark .j-accordion[aria-expanded="true"] > .j-acc-trigger {
 	border-color: var(--ui);
 }
 .j-accordion[aria-expanded="true"] > .j-acc-trigger i[data-icon="down_chevron"] {

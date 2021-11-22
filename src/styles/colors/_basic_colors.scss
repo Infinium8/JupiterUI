@@ -18,7 +18,7 @@
 	}
 }
 
-body.dark, html.dark, html[data-theme="dark"] {
+html.dark, html[data-theme="dark"] {
 	@each $color in variables.$uis {
 		.dark-#{$color} {
 			background-color: var(#{"--"}#{$color});

@@ -16,7 +16,7 @@ const Hero = () => {
 					</div>
 
 					<div className='flex flex-row align-c portrait-flex-c'>
-						<a className='j-button rounded sm mr-1r portrait-mr-0 portrait-mb-1r shadow-sm'>
+						<a href="#intro" className='j-button rounded sm mr-1r portrait-mr-0 portrait-mb-1r shadow-sm'>
 							Learn more
 						</a>
 						<a

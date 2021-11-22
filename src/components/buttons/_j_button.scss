@@ -56,7 +56,7 @@ $sizes: (
 		color: var(--text-color) !important;
 		box-shadow: 0px 0px 3px 0px rgba(50, 50, 50, 0.25);
 
-		body.dark & {
+		html.dark & {
 			border-color: var(--ui-2);
 		}
 
@@ -156,7 +156,7 @@ $sizes: (
 			box-shadow: 0px 0px 0px 4px var(--accent-20);
 		}
 
-		body.dark & {
+		html.dark & {
 			&:not(.hide-before) {
 				box-shadow: 0px 0px 0px 3px var(--accent-90);
 			}

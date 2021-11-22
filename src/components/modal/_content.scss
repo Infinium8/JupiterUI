@@ -13,7 +13,7 @@
 	scrollbar-width: thin;
 	scrollbar-color: var(--ui-2) var(--ui);
 
-	body.dark & {
+	html.dark & {
 		background-color: var(--ui-1);
 		scrollbar-color: var(--ui-2) var(--ui-1);
 	}
@@ -37,7 +37,7 @@
 	grid-gap: 1rem;
 	background: var(--ui);
 
-	body.dark & {
+	html.dark & {
 		background-color: var(--ui-1);
 	}
 }
@@ -53,7 +53,7 @@
 	background: var(--ui-2);
 	transition: var(--duration-moderate-01) ease;
 
-	// body.dark &:nth-child(1) {
+	// html.dark &:nth-child(1) {
 	// 	background-color: var(--ui);
 	// }
 }

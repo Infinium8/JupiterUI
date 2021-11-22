@@ -5,11 +5,11 @@
 	overflow: hidden;
 	transition: var(--duration-fast-02) var(--productive-standard);
 
-	body.dark &.clarify {
+	html.dark &.clarify {
 		border: 1px solid var(--ui-1);
 	}
 
-	body.dark &:not(.clarify) {
+	html.dark &:not(.clarify) {
 		background-color: var(--ui-1);
 	}
 

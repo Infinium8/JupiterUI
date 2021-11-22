@@ -27,7 +27,7 @@
 			color: var(--#{$color}-60);
 		}
 
-		body.dark &.#{$color} {
+		html.dark &.#{$color} {
 			background-color: var(--#{$color}-20) !important;
 		}
 	}

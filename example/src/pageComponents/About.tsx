@@ -1,11 +1,7 @@
-import type { ChildrenOnly } from '../types/utility';
-
-const Text = ({ children }: ChildrenOnly) => (
-	<h4 className='text-dynamic-07 fw-400 mb-2r'>{children}</h4>
-);
+import Text from "./Text";
 
 const About = () => (
-	<section className='section border-bottom-ui-2'>
+	<section className='section border-bottom-ui-2' id="intro">
 		<div className='container flex-c'>
 			<div className='mw-50r'>
 				<h3>

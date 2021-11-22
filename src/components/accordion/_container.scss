@@ -7,7 +7,7 @@
 	max-width: 100%;
 	transition: var(--duration-moderate-01) var(--expressive-standard);
 
-	body.dark & {
+	html.dark & {
 		background-color: var(--ui-1);
 	}
 
